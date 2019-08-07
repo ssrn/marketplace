@@ -20,10 +20,10 @@
         </span>
       </a>
       <a href="/profile" class="header-services__item">Мои объявления</a>
-      <a href="/login" class="header-services__item link">Вход и регистрация</a>
+      <a href="#login" class="header-services__item header-services__login link">Вход и регистрация</a>
     </div>
 
-    <a href="/additem" class="btn btn--large">Продать что-то</a>
+    <a href="/additem" class="button button--large">Продать что-то</a>
   </div>
 </header>
 <form class="search-form js-search-form-catalog js-search-form container" action="/search" method="post">
@@ -60,7 +60,7 @@
         </select>
       </div>
       <div class="search-form__submit">
-        <input type="submit" value="Найти" class="btn btn--search js-search-button">
+        <input type="submit" value="Найти" class="button button--search js-search-button">
       </div>
     </div>
     <div class="search-form__pre-filters js-pre-filters">
@@ -77,8 +77,10 @@
 </form>
 <section class="recommended-products container">
   <div class="recommended-product">
-    <a href="">
-      <img class="product__img" src="./img/strawberry.jpg" alt="">
+    <a href="" class="recommended-product__link">
+      <div class="product__img-wrap">
+        <img class="product__img" src="./img/strawberry.jpg" alt="">
+      </div>
       <div class="product__description">
         <div class="product__name">Клубнико</div>
         <div class="product__price">250</div>
@@ -95,11 +97,58 @@
       <img class="product__img" src="./img/apples.jpg" alt="">
     </a>
   </div>
-  <div class="recommended-product"></div>
-<!--  <div class="recommended-product"></div>-->
-<!--  <div class="recommended-product"></div>-->
-<!--  <div class="recommended-product"></div>-->
-<!--  <div class="recommended-product"></div>-->
+  <div class="recommended-product">
+    <a href="">
+      <img class="product__img" src="./img/apples.jpg" alt="">
+    </a>
+  </div>
 </section>
+
+<!-- Use  role="dialog" aria-labelledby="dialog1Title" aria-hidden="true" tabindex="-1" -->
+<div id="login" class="popup popup-login">
+  <div class="popup__inner">
+    <button class="popup__close" aria-label="Закрыть"></button>
+    <div class="popup__content">
+      <div id="dialog1Title" class="popup__header">Вход</div>
+      <div class="popup__content-wrapper">
+        <div class="login">
+          <div class="login-half login-half--left">
+            <form class="form login-form" method="post">
+              <div class="login__form-item">
+                <label>
+                  <input name="login" placeholder="Телефон или электронная почта" type="text" value="">
+                </label>
+              </div>
+              <div class="login__form-item">
+                <label>
+                  <input placeholder="Пароль" name="password" autocomplete="off" type="password" value="">
+                </label>
+              </div>
+              <div id="login-error"></div>
+              <button class="button action-button" type="submit">Войти</button>
+              <div class="login-form__lost link">Забыли пароль?</div>
+            </form>
+          </div>
+          <div class="login-divider">
+            <div class="login-divider__bar"></div>
+            <span class="login__or">Или</span>
+          </div>
+          <div class="login-half login-half--right">
+            <div class="login-social-buttons">
+              <a href="/auth/vk" class="button button--social-account button--vk">
+                Вконтакте
+              </a>
+              <a href="/auth/facebook" class="button button--social-account button--fb">
+                Facebook
+              </a>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./js/popup.js"></script>
 </body>
 </html>

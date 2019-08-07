@@ -1,4 +1,4 @@
-.btn {
+.button {
   display: inline-block;
 
 
@@ -11,11 +11,15 @@
   cursor: pointer;
 
   &:hover {
-    background-color: darken($brand-primary, 4%);
+    //background-color: darken($brand-primary, 4%);
   }
 }
 
-.btn--large {
+.button--primary {
+
+}
+
+.button--large {
   width: 190px;
   height: 70px;
   line-height: 70px;
