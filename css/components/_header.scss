@@ -1,0 +1,18 @@
+.page-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid #E6EAEA;
+}
+
+.header-services {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 32px;
+}
+
+.header-services__item {
+  display: inline-block;
+  padding: 0 4px;
+}

@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+
+
+  text-align: center;
+
+  //padding: $space-xxs;
+  color: #fff;
+  background-color: $brand-primary;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($brand-primary, 4%);
+  }
+}
+
+.btn--large {
+  width: 190px;
+  height: 70px;
+  line-height: 70px;
+}

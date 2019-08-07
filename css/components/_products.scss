@@ -1,0 +1,32 @@
+.recommended-products {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.recommended-product {
+  height: 270px;
+  //background: #ffe0b2;
+}
+
+.product__img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product__description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.product__name {
+  color: $text-primary;
+}
+
+.product__price {
+  color: $text-primary;
+}
