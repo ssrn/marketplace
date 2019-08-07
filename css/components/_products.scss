@@ -1,12 +1,8 @@
-.recommended-products {
+.recommended-products__wrap {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
-}
-
-.recommended-product {
-  //background: #ffe0b2;
 }
 
 .recommended-product__link {

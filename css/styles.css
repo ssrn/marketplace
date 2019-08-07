@@ -428,7 +428,7 @@ select {
 .search-form__pre-filters .form-checkbox {
   margin-right: 8px; }
 
-.recommended-products {
+.recommended-products__wrap {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
