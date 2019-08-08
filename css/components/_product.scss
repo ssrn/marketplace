@@ -54,3 +54,34 @@
 .recommended-product__link {
   display: block;
 }
+
+.full-product {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 30px;
+}
+
+.full-product__desc {
+  margin-bottom: 16px;
+}
+
+.full-product__price {
+  margin-bottom: 16px;
+  font-size: 32px;
+
+  &:after {
+    content: ' \20BD';
+  }
+}
+
+.full-product__actions {
+  width: 320px;
+
+  .button {
+    width: 100%;
+  }
+}
+
+.full-product__buy {
+  margin-bottom: 16px;
+}
