@@ -1,0 +1,21 @@
+.main-nav {
+  padding: 0 2rem;
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__item {
+  display: inline-block;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 0 12px;
+  color: $text-primary;
+  font-size: 18px;
+  text-decoration: none;
+}

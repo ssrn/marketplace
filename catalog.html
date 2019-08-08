@@ -1,0 +1,247 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Marketplace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<header class="page-header">
+  <div class="page-header__inner container">
+    <div class="page-header__logo">
+      Organic logo
+    </div>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
+        <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
+        <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
+        <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
+      </ul>
+    </nav>
+    <div class="header-services">
+      <a href="/favorites" title="Избранное" class="header-services__item">
+        <span class="">
+          <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M10.918 5.085a5.256 5.256 0 0 1 7.524 0c2.077 2.114 2.077 5.541 0 7.655l-7.405 7.534a.75.75 0 0 1-1.074 0L2.558 12.74c-2.077-2.114-2.077-5.54 0-7.655a5.256 5.256 0 0 1 7.524 0c.15.152.289.312.418.479.13-.167.269-.327.418-.479z" fill="#CCC" fill-rule="nonzero"></path></svg>
+        </span>
+      </a>
+      <a href="/profile/messenger" title="Сообщения" class="header-services__item">
+      <span>
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="#CCC" fill-rule="evenodd"><path d="M8.827 3.28A19.839 19.839 0 0 1 12 3c.97 0 2.027.093 3.173.28A8.135 8.135 0 0 1 22 11.309c0 3.804-2.84 7.01-6.617 7.468A28.26 28.26 0 0 1 12 19c-1.028 0-2.156-.074-3.383-.223A7.523 7.523 0 0 1 2 11.309 8.135 8.135 0 0 1 8.827 3.28z"></path><path d="M4.5 15l-1.773 4.963a.8.8 0 0 0 1.15.964L9 18l-4.5-3z"></path></g></svg>
+        </span>
+      </a>
+      <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
+      <a href="#login" class="header-services__item header-services__login">Вход и регистрация</a>
+    </div>
+
+    <a href="/additem" class="button button--primary button--large">Продать урожай</a>
+  </div>
+</header>
+<form class="search-form js-search-form-catalog js-search-form container" action="/search" method="post">
+  <div class="search-form__inner">
+    <div class="search-form__row">
+      <!--        <div class="search-form__category">-->
+      <!--          <div class="form-select">-->
+      <!--            <select id="category" name="category_id" class="js-search-form-category js-category-indent">-->
+      <!--              <option value="" class="js-root">Любая категория</option>-->
+      <!--              <option value="" class="js-root">Овощи</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Огурцы</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Помидоры</option>-->
+      <!--              <option value="" class="js-root">Фрукты</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Яблоки</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Груши</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Сливы</option>-->
+      <!--              <option value="" class="js-root">Ягоды</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Клубника</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Малина</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Вишня</option>-->
+      <!--              <option value="" class="js-root">Зелень</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Салаты</option>-->
+      <!--              <option value="">&nbsp; &nbsp;Мята</option>-->
+      <!--            </select>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <div class="search-form__key-words">
+        <input type="text" value="" maxlength="100">
+        <!--    <input id="search" type="text" name="name" value="" placeholder="Поиск по объявлениям" spellcheck="false" data-suggest="true" maxlength="100" class="suggest_search" autocomplete="off">-->
+      </div>
+      <!--      <div class="search-form__direction">-->
+      <!--        <select name="metro[]" class="directions">-->
+      <!--          <option value="">Станция метро</option>-->
+      <!--        </select>-->
+      <!--      </div>-->
+      <div class="search-form__submit">
+        <input type="submit" value="Найти" class="button button--primary button--search js-search-button">
+      </div>
+    </div>
+    <!--    <div class="search-form__pre-filters js-pre-filters">-->
+    <!--      <label class="form-checkbox">-->
+    <!--        <input type="checkbox" class="js-by-title">-->
+    <!--        <span class="form-checkbox__label">только в названиях</span>-->
+    <!--      </label>-->
+    <!--      <label class="form-checkbox">-->
+    <!--        <input type="checkbox" class="js-with-images">-->
+    <!--        <span class="form-checkbox__label">только с фото</span>-->
+    <!--      </label>-->
+    <!--    </div>-->
+  </div>
+</form>
+<main class="page-content">
+  <div class="catalog container">
+    <aside class="catalog-sidebar">
+      <nav class="catalog-nav">
+        <h3>Категории</h3>
+        <ul class="catalog-nav__list">
+          <li class="catalog-nav__item">
+            <a href="/" class="catalog-nav__link">Овощи</a>
+            <ul class="catalog-nav__list catalog-nav__list--lvl2">
+              <li class="catalog-nav__item">
+                <a class="catalog-nav__link" href="/">Огурцы</a>
+              </li>
+              <li class="catalog-nav__item" itemprop="name">
+                <a class="catalog-nav__link" href="/">Помидоры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-nav__item">
+            <a href="/" class="catalog-nav__link">Фрукты</a>
+            <ul class="catalog-nav__list catalog-nav__list--lvl2">
+              <li class="catalog-nav__item">
+                <a class="catalog-nav__link" href="/">Яблоки</a>
+              </li>
+              <li class="catalog-nav__item" itemprop="name">
+                <a class="catalog-nav__link" href="/">Груши</a>
+              </li>
+              <li class="catalog-nav__item" itemprop="name">
+                <a class="catalog-nav__link" href="/">Сливы</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-nav__item">
+            <a href="/" class="catalog-nav__link">Ягоды</a>
+            <ul class="catalog-nav__list catalog-nav__list--lvl2">
+              <li class="catalog-nav__item">
+                <a class="catalog-nav__link" href="/">Клубника</a>
+              </li>
+              <li class="catalog-nav__item" itemprop="name">
+                <a class="catalog-nav__link" href="/">Малина</a>
+              </li>
+              <li class="catalog-nav__item" itemprop="name">
+                <a class="catalog-nav__link" href="/">Вишня</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-nav__item">
+            <a href="/" class="catalog-nav__link">Зелень</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="catalog-content">
+      <div class="catalog-filters-views button-group">
+        <button class="catalog-filters-views__item catalog-filters-views__item--gallery button is-active" type="button" aria-label="Вид каталога - галерея">
+          <i class="i-catalog-view i-catalog-view--gallery"></i>
+        </button>
+        <button class="catalog-filters-views__item catalog-filters-views__item--list button" type="button" aria-label="Вид каталога - список">
+          <i class="i-catalog-view i-catalog-view--list"></i>
+        </button>
+      </div>
+      <div class="products__wrap products__wrap--table">
+        <div class="product">
+          <a href="" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img" src="./img/strawberry.jpg" alt="">
+            </div>
+            <div class="product__desc">
+              <div class="product__name">Клубнико</div>
+              <div class="product__price">250</div>
+            </div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img" src="./img/cucumber.png" alt="">
+            </div>
+            <div class="product__desc">
+              <div class="product__name">Огурцы хрустящие</div>
+              <div class="product__price">80</div>
+            </div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img" src="./img/apples.jpg" alt="">
+            </div>
+            <div class="product__desc">
+              <div class="product__name">Яблоки "Ред Делишес"</div>
+              <div class="product__price">90</div>
+            </div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img" src="./img/apples.jpg" alt="">
+            </div>
+            <div class="product__desc">
+              <div class="product__name">Яблоко молодое белый налив</div>
+              <div class="product__price">60</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<!-- Use  role="dialog" aria-labelledby="dialog1Title" aria-hidden="true" tabindex="-1" -->
+<div id="login" class="popup popup-login">
+  <div class="popup__inner">
+    <button class="popup__close" aria-label="Закрыть"></button>
+    <div class="popup__content">
+      <div id="dialog1Title" class="popup__header">Вход</div>
+      <div class="popup__content-wrapper">
+        <div class="login">
+          <div class="login-half login-half--left">
+            <form class="form login-form" method="post">
+              <div class="login__form-item">
+                <label>
+                  <input name="login" placeholder="Телефон или электронная почта" type="text" value="">
+                </label>
+              </div>
+              <div class="login__form-item">
+                <label>
+                  <input placeholder="Пароль" name="password" autocomplete="off" type="password" value="">
+                </label>
+              </div>
+              <div id="login-error"></div>
+              <button class="button button--primary action-button" type="submit">Войти</button>
+              <div class="login-form__lost link">Забыли пароль?</div>
+            </form>
+          </div>
+          <div class="login-divider">
+            <div class="login-divider__bar"></div>
+            <span class="login__or">Или</span>
+          </div>
+          <div class="login-half login-half--right">
+            <div class="login-social-buttons">
+              <a href="/auth/vk" class="button button--social-account button--vk">
+                Вконтакте
+              </a>
+              <a href="/auth/facebook" class="button button--social-account button--fb">
+                Facebook
+              </a>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
