@@ -1,0 +1,17 @@
+.profile-settings__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-picture {
+  height: 94px;
+  width: 94px;
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    min-height: 100%;
+  }
+}

@@ -1,0 +1,87 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Marketplace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<header class="page-header">
+  <div class="page-header__inner container">
+    <a class="page-header__logo" href="/">Organic logo</a>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
+        <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
+        <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
+        <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
+      </ul>
+    </nav>
+    <div class="header-services">
+      <a href="/favorites" title="Избранное" class="header-services__item">
+        <span class="">
+          <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M10.918 5.085a5.256 5.256 0 0 1 7.524 0c2.077 2.114 2.077 5.541 0 7.655l-7.405 7.534a.75.75 0 0 1-1.074 0L2.558 12.74c-2.077-2.114-2.077-5.54 0-7.655a5.256 5.256 0 0 1 7.524 0c.15.152.289.312.418.479.13-.167.269-.327.418-.479z" fill="#CCC" fill-rule="nonzero"></path></svg>
+        </span>
+      </a>
+      <a href="/profile/messenger" title="Сообщения" class="header-services__item">
+      <span>
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="#CCC" fill-rule="evenodd"><path d="M8.827 3.28A19.839 19.839 0 0 1 12 3c.97 0 2.027.093 3.173.28A8.135 8.135 0 0 1 22 11.309c0 3.804-2.84 7.01-6.617 7.468A28.26 28.26 0 0 1 12 19c-1.028 0-2.156-.074-3.383-.223A7.523 7.523 0 0 1 2 11.309 8.135 8.135 0 0 1 8.827 3.28z"></path><path d="M4.5 15l-1.773 4.963a.8.8 0 0 0 1.15.964L9 18l-4.5-3z"></path></g></svg>
+        </span>
+      </a>
+      <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
+      <div class="header-services__profile">
+        <a href="#login" class="header-services__item header-services__avatar">
+          C
+        </a>
+        <div class="header-services__profile-menu">
+          <ul>
+            <li><a href="/profile.html"></a>Профиль</li>
+            <li><a href=""></a>Мои объявления</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <a href="/additem" class="button button--primary button--xl">Продать урожай</a>
+  </div>
+</header>
+<main class="page-content">
+  <div class="profile-settings container">
+    <div class="profile-settings__header">
+      <h1 class="profile-settings__title">
+        <input class="profile-settings__email" name="" size="40" type="text" value="svetlana.kondratyeva@gmail.com">
+      </h1>
+    </div>
+    <div class="profile-settings__body">
+      <div class="profile-settings__photo">
+        <div class="user-picture">
+          <img src="../img/user-pictures/user.jpg" alt="Аватар пользователя">
+        </div>
+        <div class="form-item form-type-checkbox form-item-picture-delete">
+          <input id="edit-picture-delete" type="checkbox"  name="picture_delete" value="1" class="form-checkbox">
+          <label class="option" for="edit-picture-delete">Удалить </label>
+        </div>
+        <div class="form-item form-type-file form-item-files-picture-upload">
+          <label for="edit-picture-upload">Файл </label>
+          <input id="edit-picture-upload" type="file"name="files[picture_upload]" size="48" class="form-file">
+        </div>
+      </div>
+      <div class="profile-settings__contacts-wrap">
+        <form id="profile-settings-form" action="" method="post">
+          <div class="form-item">
+            <label for="fld-name">Имя</label>
+            <input id="fld-name"  class="" type="text" name="name" value="Светлана" size="60" maxlength="64">
+          </div>
+          <div class="form-item">
+            <label for="fld-phone">Телефон</label>
+            <input id="fld-phone" class="" type="text" name="phone" placeholder="+7(___) ___-__-__" value="" size="16" maxlength="64">
+          </div>
+          <button type="submit" class="button button--primary button-l">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>

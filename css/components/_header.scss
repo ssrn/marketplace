@@ -1,3 +1,7 @@
+.page-header {
+  margin-bottom: 24px;
+}
+
 .page-header__inner {
   display: flex;
   flex-wrap: wrap;
@@ -26,4 +30,37 @@
 
 .header-services__login {
   color: $link-color;
+}
+
+.header-services__profile-menu {
+  position: absolute;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 100;
+  background: white;
+
+  .header-services__profile:hover & {
+    overflow: auto;
+    max-height: 100%;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header-services__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin: auto 8px auto 0;
+  color: #fff;
+  font-size: 18px;
+  background: #0091d9;
+  border-radius: 50%;
+  overflow: hidden;
 }
