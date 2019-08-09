@@ -554,6 +554,7 @@ select {
   flex-wrap: wrap; }
 
 .product__img-wrap {
+  position: relative;
   height: 200px; }
   .products__wrap--list .product__img-wrap {
     width: 200px;
@@ -567,6 +568,20 @@ select {
   object-fit: cover; }
   .products__wrap--table .product__img {
     width: 100%; }
+
+.product__wishlist {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent; }
+  .product__wishlist svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: #fff; }
+  .product--in-wishlist .product__wishlist svg {
+    color: red;
+    opacity: .8; }
 
 .product__desc {
   margin-top: 12px; }
@@ -592,6 +607,9 @@ select {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 30px; }
+
+.full-product__left {
+  position: relative; }
 
 .full-product__desc {
   margin-bottom: 16px; }

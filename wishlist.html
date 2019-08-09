@@ -29,59 +29,45 @@
         </span>
       </a>
       <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
-      <div class="header-services__profile">
-        <a href="#login" class="header-services__item header-services__avatar">
-          C
-        </a>
-        <div class="header-services__profile-menu">
-          <ul>
-            <li><a href="/profile.html"></a>Профиль</li>
-            <li><a href=""></a>Мои объявления</li>
-          </ul>
-        </div>
-      </div>
+      <a href="#login" class="header-services__item header-services__login">Вход и регистрация</a>
     </div>
 
     <a href="/additem" class="button button--primary button--xl">Продать урожай</a>
   </div>
 </header>
 <main class="page-content">
-  <div class="profile-settings container">
-    <div class="profile-settings__header">
-      <h1 class="profile-settings__title">
-        <input class="profile-settings__email" name="" size="40" type="text" value="svetlana.kondratyeva@gmail.com">
-      </h1>
-    </div>
-    <div class="profile-settings__body">
-      <div class="profile-settings__photo">
-        <div class="user-picture">
-          <img src="../img/user-pictures/user.jpg" alt="Аватар пользователя">
-        </div>
-        <div class="form-item form-type-checkbox form-item-picture-delete">
-          <input id="edit-picture-delete" type="checkbox"  name="picture_delete" value="1" class="form-checkbox">
-          <label class="option" for="edit-picture-delete">Удалить </label>
-        </div>
-        <div class="form-item form-type-file form-item-files-picture-upload">
-          <label for="edit-picture-upload">Файл </label>
-          <input id="edit-picture-upload" type="file"name="files[picture_upload]" size="48" class="form-file">
-        </div>
+  <div class="favorites container">
+    <div class="products__wrap products__wrap--list">
+      <div class="product">
+        <a href="" class="product__link">
+          <div class="product__img-wrap">
+            <img class="product__img" src="./img/strawberry.jpg" alt="">
+            <button class="button product__wishlist" type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+              <svg viewBox="0 0 24 24" fill="#484848" fill-opacity="0.5" stroke="#ffffff" stroke-width="2" focusable="false" role="img" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m17.5 2.9c-2.1 0-4.1 1.3-5.4 2.8-1.6-1.6-3.8-3.2-6.2-2.7-1.5.2-2.9 1.2-3.6 2.6-2.3 4.1 1 8.3 3.9 11.1 1.4 1.3 2.8 2.5 4.3 3.6.4.3 1.1.9 1.6.9s1.2-.6 1.6-.9c3.2-2.3 6.6-5.1 8.2-8.8 1.5-3.4 0-8.6-4.4-8.6" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product__desc">
+            <div class="product__name">Клубнико</div>
+            <div class="product__price">250</div>
+          </div>
+        </a>
       </div>
-      <div class="profile-settings__contacts-wrap">
-        <form id="profile-settings-form" action="" method="post">
-          <div class="form-item">
-            <label for="fld-name">Имя</label>
-            <input id="fld-name"  class="" type="text" name="name" value="Светлана" size="60" maxlength="64">
+      <div class="product">
+        <a href="" class="product__link">
+          <div class="product__img-wrap">
+            <img class="product__img" src="./img/cucumber.png" alt="">
           </div>
-          <div class="form-item">
-            <label for="fld-phone">Телефон</label>
-            <input id="fld-phone" class="" type="text" name="phone" placeholder="+7(___) ___-__-__" value="" size="16" maxlength="64">
+          <div class="product__desc">
+            <div class="product__name">Огурцы хрустящие</div>
+            <div class="product__price">80</div>
           </div>
-          <button type="submit" class="button button--primary button-l">Сохранить</button>
-        </form>
+        </a>
       </div>
     </div>
-
   </div>
 </main>
+<script src="js/script.js"></script>
 </body>
 </html>
