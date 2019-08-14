@@ -45,10 +45,10 @@
           <a href="#login" class="header-services__avatar">
             C
           </a>
-          <div class="header-services__profile-menu">
-            <ul>
-              <li><a href="/profile.html"></a>Профиль</li>
-              <li><a href=""></a>Мои объявления</li>
+          <div class="header-services__profile-menu profile-menu">
+            <ul class="profile-menu__list">
+              <li class="profile-menu__item"><a href="/profile.html">Профиль</a></li>
+              <li class="profile-menu__item"><a href="">Мои объявления</a></li>
             </ul>
           </div>
         </div>
@@ -75,40 +75,32 @@
 </nav>
 <main class="page-content">
   <div class="profile-settings container">
-    <div class="profile-settings__header">
-      <h1 class="profile-settings__title">
-        <input class="profile-settings__email" name="" size="40" type="text" value="svetlana.kondratyeva@gmail.com">
-      </h1>
-    </div>
-    <div class="profile-settings__body">
+    <form id="profile-settings-form" class="profile-settings__form" action="" method="post">
       <div class="profile-settings__photo">
         <div class="user-picture">
           <img src="../img/user-pictures/user.jpg" alt="Аватар пользователя">
         </div>
-        <div class="form-item form-type-checkbox form-item-picture-delete">
-          <input id="edit-picture-delete" type="checkbox"  name="picture_delete" value="1" class="form-checkbox">
-          <label class="option" for="edit-picture-delete">Удалить </label>
-        </div>
-        <div class="form-item form-type-file form-item-files-picture-upload">
-          <label for="edit-picture-upload">Файл </label>
-          <input id="edit-picture-upload" type="file"name="files[picture_upload]" size="48" class="form-file">
+        <div class="form-item form-type-file form-item__files-picture-upload">
+          <label for="edit-picture-upload" class="visually-hidden">Файл</label>
+          <input id="edit-picture-upload" type="file" name="files[picture_upload]" size="48" class="form-file">
         </div>
       </div>
-      <div class="profile-settings__contacts-wrap">
-        <form id="profile-settings-form" action="" method="post">
-          <div class="form-item">
-            <label for="fld-name">Имя</label>
-            <input id="fld-name"  class="" type="text" name="name" value="Светлана" size="60" maxlength="64">
-          </div>
-          <div class="form-item">
-            <label for="fld-phone">Телефон</label>
-            <input id="fld-phone" class="" type="text" name="phone" placeholder="+7(___) ___-__-__" value="" size="16" maxlength="64">
-          </div>
-          <button type="submit" class="button button--primary button-l">Сохранить</button>
-        </form>
+      <div class="form-item">
+        <label for="fld-email">Email</label>
+        <h1 class="profile-settings__title">
+          <input id="fld-email" class="profile-settings__email" name="" size="40" type="text" value="svetlana.kondratyeva@gmail.com">
+        </h1>
       </div>
-    </div>
-
+      <div class="form-item">
+        <label for="fld-name">Имя</label>
+        <input id="fld-name" class="" type="text" name="name" value="Светлана" size="60" maxlength="64">
+      </div>
+      <div class="form-item">
+        <label for="fld-phone">Телефон</label>
+        <input id="fld-phone" class="" type="text" name="phone" placeholder="+7(___) ___-__-__" value="" size="16" maxlength="64">
+      </div>
+      <button type="submit" class="button button--primary button--l">Сохранить</button>
+    </form>
   </div>
 </main>
 </body>

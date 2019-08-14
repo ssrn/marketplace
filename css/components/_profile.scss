@@ -1,17 +1,32 @@
-.profile-settings__body {
-  display: flex;
-  flex-wrap: wrap;
+.profile-settings {
+  margin-top: 24px;
+}
+
+.profile-settings__form {
+  width: 100%;
+  max-width: 360px;
+
+  input {
+    width: 100%;
+  }
+}
+
+.form-item__files-picture-upload input {
+  padding-left: 0;
 }
 
 .user-picture {
-  height: 94px;
-  width: 94px;
+  height: 128px;
+  width: 128px;
   border: 1px solid #ececec;
-  border-radius: 50%;
-  overflow: hidden;
 
   img {
     object-fit: cover;
     min-height: 100%;
   }
+}
+
+.profile-settings__title {
+  margin: 0;
+  font-size: 16px;
 }

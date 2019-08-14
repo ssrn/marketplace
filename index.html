@@ -3,7 +3,6 @@
   <meta charset="utf-8">
   <title>Marketplace</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -40,6 +39,7 @@
               <use xlink:href="../img/svg/message.svg#message"></use>
             </svg>
           </span>
+          <div class="notify-number">2</div>
         </a>
         <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
         <a href="#login" class="header-services__item header-services__login">Вход и регистрация</a>
@@ -65,7 +65,7 @@
   </ul>
 </nav>
 <main class="page-content">
-  <h1 class="visually-hidden">Вкусные овощи и фрукты</h1>
+  <h1 class="page-title visually-hidden">Вкусные овощи и фрукты</h1>
   <section class="recommended-products container">
     <h2 class="recommended-products__title">Рекомендации для вас</h2>
     <div class="recommended-products__wrap">
@@ -129,12 +129,12 @@
 
 
 <!-- Use  role="dialog" aria-labelledby="dialog1Title" aria-hidden="true" tabindex="-1" -->
-<div id="login" class="popup popup-login">
-  <div class="popup__inner">
-    <button class="popup__close" aria-label="Закрыть"></button>
-    <div class="popup__content">
-      <div id="dialog1Title" class="popup__header">Вход</div>
-      <div class="popup__content-wrapper">
+<div id="login" class="dialog dialog-login">
+  <div class="dialog__inner">
+    <button class="dialog__close" aria-label="Закрыть"></button>
+    <div class="dialog__content">
+      <div id="dialog1Title" class="dialog__header">Вход</div>
+      <div class="dialog__content-wrapper">
         <div class="login">
           <div class="login__half">
             <div class="login__social-buttons">
