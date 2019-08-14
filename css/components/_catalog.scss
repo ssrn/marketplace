@@ -1,25 +1,85 @@
 .catalog {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "sidebar content";
+  @include media(md) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+            "a a a a"
+            "b c c c"
+            "b c c c";
+  }
+}
+
+.catalog h1 {
+  grid-area: a;
+
+  @include media(md) {
+    justify-self: end;
+    width: 75%;
+  }
 }
 
 .catalog-sidebar {
-  grid-area: sidebar;
+  grid-area: b;
 }
 
 .catalog-content {
-  grid-area: content;
+  grid-area: c;
+}
+
+.catalog-sidebar__filter-buttons-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  @include media(md) {
+    display: none;
+  }
+}
+
+.catalog-sidebar__filter-button {
+  display: none;
+
+  &.is-active {
+   display: block;
+  }
+}
+
+.catalog-nav {
+  @include media(sm, max) {
+    display: none;
+  }
+}
+
+.catalog-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+
+  @include media(ms, max) {
+    display: none;
+  }
+}
+
+.sort-by-relevance {
+  margin-right: 30px;
 }
 
 .catalog-filters-views {
-  //display: flex;
-  //justify-content: flex-end;
-  margin-bottom: 16px;
+  @include media(xs) {
+    display: none;
+  }
 }
 
 .catalog-filters-views__item {
+  padding: 8px 10px;
   border: 1px solid #ccc;
+
+  &:first-child {
+    margin-right: 8px;
+  }
 
   &.is-active {
     background: $brand-primary;
@@ -52,8 +112,7 @@
 }
 
 .products__wrap--table {
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(0, auto);
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-gap: 30px;
 }
 
