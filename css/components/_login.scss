@@ -1,7 +1,5 @@
 .login {
-  display: flex;
-  flex-wrap: wrap;
-  width: 768px;
+  width: 360px;
 
   .action-button {
     height: 40px;
@@ -10,16 +8,8 @@
   }
 }
 
-.login-half {
-  width: 50%;
-
-  &--left {
-    padding-right: 8%;
-  }
-
-  &--right {
-    padding-left: 8%;
-  }
+.login-form {
+  margin-bottom: 0;
 }
 
 .login__form-item {
@@ -52,33 +42,9 @@
   background-image: url(../../img/svg/login-logo-fb.svg);
 }
 
-.login-divider {
-  width: 0;
-  position: relative;
-}
-
-.login-divider__bar {
-  position: absolute;
-  top: 0;
-  left: -1px;
-  width: 2px;
-  height: 100%;
-  background: $brand-primary;
-}
-
-.login__or {
-  position: absolute;
-  top: 50%;
-  left: -28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 56px;
-  height: 40px;
-  margin-top: -20px;
-  font-size: 1.2rem;
-  background: #fff;
-  border: 2px solid $brand-primary;
-  border-radius: 10px;
+.login__divider {
+  margin: 24px 0;
+  font-size: 18px;
+  text-align: center;
 }
 

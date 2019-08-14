@@ -136,8 +136,22 @@
       <div id="dialog1Title" class="popup__header">Вход</div>
       <div class="popup__content-wrapper">
         <div class="login">
-          <div class="login-half login-half--left">
-            <form class="form login-form" method="post">
+          <div class="login__half">
+            <div class="login__social-buttons">
+              <a href="/auth/vk" class="button button--social-account button--vk">
+                Вконтакте
+              </a>
+              <a href="/auth/facebook" class="button button--social-account button--fb">
+                Facebook
+              </a>
+              </a>
+            </div>
+          </div>
+
+          <div class="login__divider">Или</div>
+
+          <div class="login__half">
+            <form class="login-form form" method="post">
               <div class="login__form-item">
                 <label>
                   <input name="login" placeholder="Телефон или электронная почта" type="text" value="">
@@ -152,21 +166,6 @@
               <button class="button button--primary action-button" type="submit">Войти</button>
               <div class="login-form__lost link">Забыли пароль?</div>
             </form>
-          </div>
-          <div class="login-divider">
-            <div class="login-divider__bar"></div>
-            <span class="login__or">Или</span>
-          </div>
-          <div class="login-half login-half--right">
-            <div class="login-social-buttons">
-              <a href="/auth/vk" class="button button--social-account button--vk">
-                Вконтакте
-              </a>
-              <a href="/auth/facebook" class="button button--social-account button--fb">
-                Facebook
-              </a>
-              </a>
-            </div>
           </div>
         </div>
       </div>

@@ -199,52 +199,6 @@
   </div>
 </main>
 
-
-<!-- Use  role="dialog" aria-labelledby="dialog1Title" aria-hidden="true" tabindex="-1" -->
-<div id="login" class="popup popup-login">
-  <div class="popup__inner">
-    <button class="popup__close" aria-label="Закрыть"></button>
-    <div class="popup__content">
-      <div id="dialog1Title" class="popup__header">Вход</div>
-      <div class="popup__content-wrapper">
-        <div class="login">
-          <div class="login-half login-half--left">
-            <form class="form login-form" method="post">
-              <div class="login__form-item">
-                <label>
-                  <input name="login" placeholder="Телефон или электронная почта" type="text" value="">
-                </label>
-              </div>
-              <div class="login__form-item">
-                <label>
-                  <input placeholder="Пароль" name="password" autocomplete="off" type="password" value="">
-                </label>
-              </div>
-              <div id="login-error"></div>
-              <button class="button button--primary action-button" type="submit">Войти</button>
-              <div class="login-form__lost link">Забыли пароль?</div>
-            </form>
-          </div>
-          <div class="login-divider">
-            <div class="login-divider__bar"></div>
-            <span class="login__or">Или</span>
-          </div>
-          <div class="login-half login-half--right">
-            <div class="login-social-buttons">
-              <a href="/auth/vk" class="button button--social-account button--vk">
-                Вконтакте
-              </a>
-              <a href="/auth/facebook" class="button button--social-account button--fb">
-                Facebook
-              </a>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <script src="js/script.js"></script>
 </body>
 </html>

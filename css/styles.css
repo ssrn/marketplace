@@ -776,20 +776,14 @@ h3 {
   text-transform: uppercase; }
 
 .login {
-  display: flex;
-  flex-wrap: wrap;
-  width: 768px; }
+  width: 360px; }
   .login .action-button {
     height: 40px;
     width: 100%;
     margin-bottom: 12px; }
 
-.login-half {
-  width: 50%; }
-  .login-half--left {
-    padding-right: 8%; }
-  .login-half--right {
-    padding-left: 8%; }
+.login-form {
+  margin-bottom: 0; }
 
 .login__form-item {
   margin: 12px 0; }
@@ -815,32 +809,10 @@ h3 {
   background-color: #3b5998;
   background-image: url(../../img/svg/login-logo-fb.svg); }
 
-.login-divider {
-  width: 0;
-  position: relative; }
-
-.login-divider__bar {
-  position: absolute;
-  top: 0;
-  left: -1px;
-  width: 2px;
-  height: 100%;
-  background: #879934; }
-
-.login__or {
-  position: absolute;
-  top: 50%;
-  left: -28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 56px;
-  height: 40px;
-  margin-top: -20px;
-  font-size: 1.2rem;
-  background: #fff;
-  border: 2px solid #879934;
-  border-radius: 10px; }
+.login__divider {
+  margin: 24px 0;
+  font-size: 18px;
+  text-align: center; }
 
 .profile-settings__body {
   display: flex;
