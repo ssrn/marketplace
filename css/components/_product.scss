@@ -34,22 +34,34 @@
 
 .product__wishlist {
   position: absolute;
-  top: 0;
-  right: 0;
-  background: transparent;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  padding: 9px 7px 7px;
+  color: #2d2d2d;
+  border: none;
+  background-color: rgba(255,255,255,.9);
+  border-radius: 50%;
+  cursor: default;
+  outline: none;
 
   svg {
-    display: block;
-    width: 24px;
-    height: 24px;
-    color: #fff;
+    width: 100%;
+    height: 100%;
+    color: rgba(255,255,255,.9);
   }
 
   .product--in-wishlist & {
     svg {
-      color: red;
-      opacity: .8;
+      color: #2d2d2d;
+      opacity: .9;
     }
+  }
+
+  .full-product & {
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -97,6 +109,10 @@
 
 .full-product__left {
   position: relative;
+}
+
+.full-product__title {
+  margin-top: 0;
 }
 
 .full-product__desc {

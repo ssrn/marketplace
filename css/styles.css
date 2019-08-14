@@ -393,7 +393,7 @@ h3 {
   padding-right: 15px; }
 
 .page-content {
-  grid-area: main; }
+  margin-top: 48px; }
 
 .visually-hidden {
   position: absolute;
@@ -488,7 +488,8 @@ h3 {
 
 .header-services__icon--heart {
   width: 21px;
-  height: 24px; }
+  height: 24px;
+  color: #ccc; }
 
 .header-services__icon--message {
   width: 24px;
@@ -748,17 +749,27 @@ h3 {
 
 .product__wishlist {
   position: absolute;
-  top: 0;
-  right: 0;
-  background: transparent; }
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  padding: 9px 7px 7px;
+  color: #2d2d2d;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  cursor: default;
+  outline: none; }
   .product__wishlist svg {
-    display: block;
-    width: 24px;
-    height: 24px;
-    color: #fff; }
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.9); }
   .product--in-wishlist .product__wishlist svg {
-    color: red;
-    opacity: .8; }
+    color: #2d2d2d;
+    opacity: .9; }
+  .full-product .product__wishlist {
+    width: 36px;
+    height: 36px; }
 
 .product__desc {
   margin-top: 12px; }
@@ -794,6 +805,9 @@ h3 {
 
 .full-product__left {
   position: relative; }
+
+.full-product__title {
+  margin-top: 0; }
 
 .full-product__desc {
   margin-bottom: 16px; }
