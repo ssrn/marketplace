@@ -1,3 +1,11 @@
+const mobileMenu = () => {
+  const hamburger = document.querySelector('.main-nav__trigger');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('is-active');
+  });
+};
+
 const popupHandler = () => {
   const popup = document.querySelector(".popup");
   const loginBtn = document.querySelector(".header-services__login");
@@ -34,5 +42,6 @@ const catalogViewHandler = () => {
   });
 };
 
+mobileMenu();
 catalogViewHandler();
 popupHandler();
