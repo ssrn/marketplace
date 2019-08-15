@@ -19,14 +19,13 @@
   height: 128px;
   width: 128px;
   border: 1px solid #ececec;
-
-  img {
-    object-fit: cover;
-    min-height: 100%;
-  }
 }
 
 .profile-settings__title {
   margin: 0;
   font-size: 16px;
+}
+
+.avatar img {
+  border-radius: 50%;
 }

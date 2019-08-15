@@ -1,0 +1,131 @@
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid #e1e1e1;
+  min-height: 519px;
+  height: calc(100vh - 253px);
+  overflow: hidden;
+}
+
+.messenger__messages-scroll {
+  padding: 15px 30px;
+}
+
+.messages-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: #f7f7fa;
+  border-bottom: 1px solid #f1f1f1;
+  overflow: hidden;
+}
+
+.messages-header__photo {
+  width: 60px;
+  height: 45px;
+  margin-right: 12px;
+}
+
+.messages-header__link {
+  margin-right: 10px;
+}
+
+.messages-header__price:after {
+  content: ' \20BD';
+}
+
+.messages-header__author {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.messages-header__avatar {
+  width: 45px;
+  height: 45px;
+  margin-right: 12px;
+}
+
+.messages-header__author-name {
+  display: block;
+}
+
+.messages-header__lasttime {
+  color: $text-grey;
+}
+
+.messenger__messages-datetime {
+  margin-bottom: 20px;
+  color: $text-grey;
+  font-size: 14px;
+  text-align: center;
+}
+
+.messenger__message {
+  display: flex;
+  margin-bottom: 20px;
+
+  &--mine {
+    justify-content: flex-end;
+  }
+}
+
+.messenger__message-content {
+  position: relative;
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  .messenger__message--incoming & {
+    background-color: #f0f0f0;
+  }
+
+  .messenger__message--mine & {
+    background-color: #d9f3ff;
+  }
+}
+
+.messenger__message-text {
+  white-space: pre-wrap;
+}
+
+.messenger__message-datetime {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 18px;
+  margin: auto;
+  padding: 0 10px;
+  color: $text-grey;
+  font-size: 13px;
+  visibility: hidden;
+  white-space: nowrap;
+
+  .messenger__message--incoming & {
+    left: 100%;
+  }
+
+  .messenger__message--mine & {
+    left: -94px;
+  }
+
+  .messenger__message-content:hover & {
+    visibility: visible;
+  }
+}
+
+.reply-form {
+  display: flex;
+  position: relative;
+  background-color: #f7f7fa;
+  margin-bottom: 0;
+  padding: 13px 11px 11px 76px;
+}
+
+.reply-input {
+  width: 100%;
+  height: 38px;
+}
