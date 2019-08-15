@@ -1,0 +1,140 @@
+.channel {
+  display: grid;
+  grid-template-columns: 80px minmax(0, auto);;
+  grid-gap: 20px;
+  padding: 16px 0;
+  border-top: solid 1px #e7e8ec;
+  //display: flex;
+  //flex-wrap: wrap;
+  //align-items: center;
+
+  @include media(ms, max) {
+    grid-template-columns: 60px minmax(0, auto);
+    grid-gap: 16px;
+  }
+}
+
+.channel__photo {
+  //width: 80px;
+  height: 65px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.channel__preview-content {
+  //padding-left: ;: 16px 0 16px 20px;
+  //border-top: solid 1px #e7e8ec;
+}
+
+.channel__preview-content-wrap {
+  //flex-grow: 1;
+  padding-right: 32px;
+}
+
+.channel__preview-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.channel__user-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 50%;
+  margin-right: auto;
+}
+
+.channel__avatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  @include media(ms, max) {
+    width: 20px;
+    height: 20px;
+
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.channel__user-name {
+  width: 80%;
+  margin-left: 6px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+ @media screen and (max-width: 374px) {
+    width: 50%;
+  }
+}
+
+.channel__status-icon {
+  margin-right: 8px;
+}
+
+.channel__datetime {
+  display: flex;
+  align-items: center;
+  color: #858585;
+  font-size: 14px;
+
+  time {
+    display: inline-block;
+    width: 90px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @include media(ms, max) {
+      width: 54px;
+    }
+  }
+}
+
+.channel__preview-item {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.channel__preview-item-price:after {
+  content: ' \20BD';
+}
+
+.channel__preview-text {
+  color: #858585;
+  font-size: 14px;
+  line-height: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include media(sm) {
+    width: 85%;
+    max-width: calc(100% - 160px);
+  }
+}
+
+.channel__delete {
+  align-self: flex-start;
+  margin-top: -2px;
+  color: #858585;
+  background: none;
+  border: none;
+
+  @include media(xs) {
+    padding-right: 0;
+  }
+}

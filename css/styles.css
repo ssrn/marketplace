@@ -305,6 +305,11 @@ template {
 [hidden] {
   display: none; }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 .button {
   display: inline-block;
   padding: 8px 13px;
@@ -522,11 +527,6 @@ h3 {
     visibility: visible;
     padding: 8px 20px; }
 
-.profile-menu__list {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
 .profile-menu__item {
   white-space: nowrap; }
   .profile-menu__item a {
@@ -560,10 +560,7 @@ h3 {
 .main-nav__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
+  justify-content: center; }
 
 .main-nav__item {
   display: inline-block; }
@@ -935,5 +932,110 @@ h3 {
 .profile-settings__title {
   margin: 0;
   font-size: 16px; }
+
+.channel {
+  display: grid;
+  grid-template-columns: 80px minmax(0, auto);
+  grid-gap: 20px;
+  padding: 16px 0;
+  border-top: solid 1px #e7e8ec; }
+  @media only screen and (max-width: 767px) {
+    .channel {
+      grid-template-columns: 60px minmax(0, auto);
+      grid-gap: 16px; } }
+
+.channel__photo {
+  height: 65px; }
+  .channel__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.channel__preview-content-wrap {
+  padding-right: 32px; }
+
+.channel__preview-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center; }
+
+.channel__user-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 50%;
+  margin-right: auto; }
+
+.channel__avatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px; }
+  @media only screen and (max-width: 767px) {
+    .channel__avatar {
+      width: 20px;
+      height: 20px; } }
+  .channel__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; }
+
+.channel__user-name {
+  width: 80%;
+  margin-left: 6px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  @media screen and (max-width: 374px) {
+    .channel__user-name {
+      width: 50%; } }
+
+.channel__status-icon {
+  margin-right: 8px; }
+
+.channel__datetime {
+  display: flex;
+  align-items: center;
+  color: #858585;
+  font-size: 14px; }
+  .channel__datetime time {
+    display: inline-block;
+    width: 90px;
+    white-space: nowrap;
+    overflow: hidden; }
+    @media only screen and (max-width: 767px) {
+      .channel__datetime time {
+        width: 54px; } }
+
+.channel__preview-item {
+  font-size: 14px;
+  line-height: 21px; }
+
+.channel__preview-item-price:after {
+  content: ' \20BD'; }
+
+.channel__preview-text {
+  color: #858585;
+  font-size: 14px;
+  line-height: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  @media only screen and (min-width: 768px) {
+    .channel__preview-text {
+      width: 85%;
+      max-width: calc(100% - 160px); } }
+
+.channel__delete {
+  align-self: flex-start;
+  margin-top: -2px;
+  color: #858585;
+  background: none;
+  border: none; }
+  @media only screen and (max-width: 479px) {
+    .channel__delete {
+      padding-right: 0; } }
 
 /*# sourceMappingURL=styles.css.map */

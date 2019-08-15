@@ -1,0 +1,130 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Marketplace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<header class="page-header">
+  <div class="page-header__inner container">
+    <a class="page-header__logo" href="/">
+      <img class="page-header__logo-img" src="./img/four-leaves-logo-2.png" alt="">
+      <span>Veggieplace</span>
+    </a>
+
+    <form class="page-header__search search-form" role='search' action="/" method="get">
+      <label class="visually-hidden" for="header-search">Поиск</label>
+      <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
+      <div class="search-form__icon">
+        <svg class="icon--search">
+          <use xlink:href="../img/svg/search.svg#search"></use>
+        </svg>
+      </div>
+      <button class="visually-hidden" type="submit">Искать</button>
+    </form>
+
+    <div class="header-services">
+      <div class="header-services__inner">
+        <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
+          <span class="header-services__icon header-services__icon--heart">
+            <svg class="icon--heart">
+              <use xlink:href="../img/svg/heart.svg#heart"></use>
+            </svg>
+          </span>
+        </a>
+        <a href="/profile/messenger" class="header-services__item header-services__messages" aria-label="Сообщения" title="Сообщения">
+          <span class="header-services__icon header-services__icon--message">
+            <svg class="icon--message">
+              <use xlink:href="../img/svg/message.svg#message"></use>
+            </svg>
+          </span>
+          <div class="notify-number">2</div>
+        </a>
+        <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
+        <a href="#login" class="header-services__item header-services__login">Вход и регистрация</a>
+      </div>
+    </div>
+
+    <a href="/additem" class="page-header__button button button--primary">Продать урожай</a>
+
+    <button class="main-nav__trigger" type="button" title="Главное меню">
+      <span class="main-nav__trigger-line"></span>
+      <span class="main-nav__trigger-line"></span>
+      <span class="main-nav__trigger-line"></span>
+      <span class="main-nav__trigger-line"></span>
+    </button>
+  </div>
+</header>
+<nav class="main-nav">
+  <ul class="main-nav__list">
+    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
+    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
+    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
+    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
+  </ul>
+</nav>
+<main class="page-content container">
+  <section class="messenger">
+    <ul class="channels">
+      <li class="channel">
+        <div class="channel__photo">
+          <img src="./img/apples.jpg" alt="">
+        </div>
+        <div class="channel__preview-content">
+          <div class="channel__preview-title">
+            <div class="channel__user-info">
+              <span class="channel__avatar">
+                <img src="./img/user-pictures/user.jpg" alt="">
+              </span>
+              <span class="channel__user-name">Лариса</span>
+            </div>
+            <div class="channel__datetime">
+              <div class="channel__status-icon">
+                <svg width="18" height="9" viewBox="0 0 18 9" aria-hidden="true" role="img">
+                  <path d="M4 9L.186 5.195a.618.618 0 010-.884.644.644 0 01.899 0L4 7.251 10.912.184a.646.646 0 01.9-.005.618.618 0 01.004.884L4 9zm13.816-7.936L10 9 8.186 7.195a.618.618 0 010-.884.642.642 0 01.899 0l.915.94L16.912.184a.646.646 0 01.9-.005.618.618 0 01.004.884z" fill="#97CF26" fill-rule="evenodd"></path>
+                </svg>
+              </div>
+              <time datetime="">16 августа</time>
+            </div>
+            <button class="channel__delete button" type="button" title="Удалить" aria-label="Удалить">x</button>
+          </div>
+          <div class="channel__preview-item">
+            <span class="channel__preview-item-title">Антоновка</span>
+            <span class="channel__preview-item-price">60</span>
+          </div>
+          <div class="channel__preview-text">Спасибо! Эх, я уже купила</div>
+        </div>
+      </li>
+
+      <li class="channel">
+        <div class="channel__photo">
+          <img src="./img/strawberry.jpg" alt="">
+        </div>
+        <div class="channel__preview-content">
+          <div class="channel__preview-title">
+            <div class="channel__user-info">
+              <span class="channel__avatar">
+                <img src="./img/user-pictures/user-2.jpg" alt="">
+              </span>
+              <span class="channel__user-name">Анна Михайловна</span>
+            </div>
+            <div class="channel__datetime">
+              <div class="channel__status-icon"></div>
+              <time datetime="">10 июля</time>
+            </div>
+            <button class="channel__delete button" type="button" title="Удалить" aria-label="Удалить">x</button>
+          </div>
+          <div class="channel__preview-item">
+            <span class="channel__preview-item-title">Клубника ремонтантная</span>
+            <span class="channel__preview-item-price">200</span>
+          </div>
+          <div class="channel__preview-text"> Клубничка вся как на подбор — ягоды не переспелые, небольшого размера, никаких мятых или испорченных. Аромат похож на землянику.
+            Клубника оказалась более мелкой, чем в июле. На вкус она была средней сладости. Ягодки все хорошие, свежие. Детям понравилась, поэтому спасибо ВкусВиллу!!! Будем покупать ещё, пока лето и свежая местная ягода не исчезла с прилавка.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
