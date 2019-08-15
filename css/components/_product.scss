@@ -103,12 +103,20 @@
 
 .full-product {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(0, auto);
   grid-gap: 30px;
+
+  @include media(sm) {
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .full-product__left {
   position: relative;
+}
+
+.full-product__img {
+  width: 380px;
 }
 
 .full-product__title {
