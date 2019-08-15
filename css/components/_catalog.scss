@@ -51,6 +51,10 @@
   }
 }
 
+.catalog-nav__list {
+  @extend .default-list;
+}
+
 .catalog-top {
   display: flex;
   flex-wrap: wrap;

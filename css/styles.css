@@ -310,6 +310,9 @@ ul {
   margin: 0;
   padding: 0; }
 
+form {
+  margin: 0; }
+
 .button {
   display: inline-block;
   padding: 8px 13px;
@@ -419,6 +422,13 @@ h3 {
 .ov-scroll {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
+
+.default-list, .catalog-nav__list {
+  list-style-type: disc;
+  margin: 1em 0;
+  padding-left: 40px; }
+  .default-list ul, .catalog-nav__list ul {
+    list-style-type: circle; }
 
 .cropped-image {
   width: 100%;
@@ -626,8 +636,7 @@ h3 {
     width: 0; }
 
 .search-form {
-  position: relative;
-  margin-bottom: 0; }
+  position: relative; }
 
 .search-form__input {
   width: 100%; }
@@ -883,9 +892,6 @@ h3 {
     width: 100%;
     margin-bottom: 12px; }
 
-.login-form {
-  margin-bottom: 0; }
-
 .login__form-item {
   margin: 12px 0; }
   .login__form-item input {
@@ -1130,7 +1136,6 @@ h3 {
   display: flex;
   position: relative;
   background-color: #f7f7fa;
-  margin-bottom: 0;
   padding: 13px 11px 11px 76px; }
 
 .reply-input {
