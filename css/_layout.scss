@@ -16,10 +16,24 @@ body.is-fixed {
 }
 
 .page-content {
-  margin-top: 24px;
+  margin-top: 16px;
 
   @include media(sm) {
     margin-top: 48px;
+  }
+}
+
+.navigation {
+  margin-bottom: 16px;
+
+  @include media(sm) {
+    margin-bottom: 20px;
+  }
+
+  .messenger & {
+    @include media(ms, max) {
+      padding: 0 15px;
+    }
   }
 }
 
