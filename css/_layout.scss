@@ -11,6 +11,10 @@
   padding-right: 15px;
 }
 
+body.is-fixed {
+  overflow: hidden;
+}
+
 .page-content {
   margin-top: 24px;
 
