@@ -355,6 +355,10 @@ input {
 label {
   display: block; }
 
+.form-checkbox__input {
+  width: 16px;
+  height: 16px; }
+
 a,
 .link {
   color: #0091d9;
@@ -690,19 +694,26 @@ h3 {
 .catalog-top {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 16px; }
-  @media only screen and (max-width: 767px) {
+  align-items: center; }
+  @media only screen and (min-width: 480px) {
     .catalog-top {
-      display: none; } }
+      margin-bottom: 16px; } }
+
+@media only screen and (max-width: 479px) {
+  .catalog-top__item {
+    margin-bottom: 16px; } }
 
 .sort-by-relevance {
   margin-right: 30px; }
 
-@media only screen and (max-width: 479px) {
-  .catalog-filters-views {
-    display: none; } }
+.catalog-filters-photo {
+  margin-right: 30px; }
+
+.catalog-filters-views {
+  margin-left: auto; }
+  @media screen and (max-width: 599px) {
+    .catalog-filters-views {
+      display: none; } }
 
 .catalog-filters-views__item {
   padding: 8px 10px;

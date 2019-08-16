@@ -124,7 +124,7 @@
     </aside>
     <div class="catalog-content">
       <div class="catalog-top">
-        <div class="sort-by-relevance">
+        <div class="catalog-top__item sort-by-relevance">
           <div class="dropdown-sort-container">
             <select class="dropdown-sort" aria-label="Сортировать по">
               <option value="13">Популярные</option>
@@ -133,7 +133,13 @@
             </select>
           </div>
         </div>
-        <div class="catalog-filters-views button-group">
+        <div class="catalog-top__item catalog-filters-photo button-group">
+          <label class="form-checkbox">
+            <input type="checkbox" class="form-checkbox__input">
+            <span class="form-checkbox__label">только с фото</span>
+          </label>
+        </div>
+        <div class="catalog-top__item catalog-filters-views button-group">
           <button class="catalog-filters-views__item catalog-filters-views__item--gallery button is-active" type="button" aria-label="Вид каталога - галерея">
             <i class="i-catalog-view i-catalog-view--gallery"></i>
           </button>

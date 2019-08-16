@@ -59,11 +59,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 16px;
 
-  @include media(ms, max) {
-    display: none;
+  @include media(ms) {
+    margin-bottom: 16px;
+  }
+}
+
+.catalog-top__item {
+  @include media(xs) {
+    margin-bottom: 16px;
   }
 }
 
@@ -71,8 +75,14 @@
   margin-right: 30px;
 }
 
+.catalog-filters-photo {
+  margin-right: 30px;
+}
+
 .catalog-filters-views {
-  @include media(xs) {
+  margin-left: auto;
+
+  @media screen and (max-width: 599px) {
     display: none;
   }
 }
