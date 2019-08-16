@@ -1,3 +1,7 @@
+.product {
+  position: relative;
+}
+
 .product__link {
   .products__wrap--list & {
     display: flex;
@@ -6,7 +10,6 @@
 }
 
 .product__img-wrap {
-  position: relative;
   height: 200px;
 
   .products__wrap--list & {
@@ -34,6 +37,10 @@
   border-radius: 50%;
   cursor: default;
   outline: none;
+
+  .products__wrap--list & {
+    left: 160px;
+  }
 
   svg {
     width: 100%;
