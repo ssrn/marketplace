@@ -1,23 +1,23 @@
 const mobileMenuHandler = () => {
-  const hamburger = document.querySelector('.main-nav__trigger');
-  hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('is-active');
-    document.querySelector(".mobile-menu").classList.toggle('is-active');
-    document.body.classList.toggle('is-fixed');
+  const hamburger = document.querySelector(".main-nav-trigger");
+  hamburger.addEventListener("click", function() {
+    hamburger.classList.toggle("is-active");
+    document.querySelector(".mobile-menu").classList.toggle("is-active");
+    document.body.classList.toggle("is-fixed");
   });
 };
 
 const catalogViewHandler = () => {
   const catalogViews = document.querySelectorAll(".catalog-filters-views__item");
-  const productsWrap = document.querySelector(".products__wrap");
+  const productsWrap = document.querySelector(".products");
   catalogViews.forEach(function (view) {
     view.addEventListener("click", function () {
       let inactiveCatalogView = document.querySelector(".catalog-filters-views__item:not(.is-active)");
       if (this === inactiveCatalogView) {
         document.querySelector(".catalog-filters-views__item.is-active").classList.remove("is-active");
         this.classList.add("is-active");
-        productsWrap.classList.toggle("products__wrap--table");
-        productsWrap.classList.toggle("products__wrap--list");
+        productsWrap.classList.toggle("products--table");
+        productsWrap.classList.toggle("products--list");
       }
     })
   })

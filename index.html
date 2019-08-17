@@ -18,7 +18,7 @@
       <label class="visually-hidden" for="header-search">Поиск</label>
       <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
       <div class="search-form__icon">
-        <svg class="icon--search">
+        <svg class="icon-search">
           <use xlink:href="../img/svg/search.svg#search"></use>
         </svg>
       </div>
@@ -28,15 +28,15 @@
     <div class="header-services">
       <div class="header-services__inner">
         <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
-          <span class="header-services__icon header-services__icon--heart">
-            <svg class="icon--heart">
+          <span class="header-services__icon">
+            <svg class="icon-heart">
               <use xlink:href="../img/svg/heart.svg#heart"></use>
             </svg>
           </span>
         </a>
         <a href="/messenger-channels.html" class="header-services__item header-services__messages" aria-label="Сообщения" title="Сообщения">
-          <span class="header-services__icon header-services__icon--message">
-            <svg class="icon--message">
+          <span class="header-services__icon">
+            <svg class="icon-message">
               <use xlink:href="../img/svg/message.svg#message"></use>
             </svg>
           </span>
@@ -49,11 +49,11 @@
 
     <a href="/additem" class="page-header__button button button--primary">Продать урожай</a>
 
-    <button class="main-nav__trigger" type="button" title="Главное меню">
-      <span class="main-nav__trigger-line"></span>
-      <span class="main-nav__trigger-line"></span>
-      <span class="main-nav__trigger-line"></span>
-      <span class="main-nav__trigger-line"></span>
+    <button class="main-nav-trigger" type="button" title="Главное меню">
+      <span class="main-nav-trigger__line"></span>
+      <span class="main-nav-trigger__line"></span>
+      <span class="main-nav-trigger__line"></span>
+      <span class="main-nav-trigger__line"></span>
     </button>
   </div>
 </header>
@@ -76,11 +76,11 @@
   </nav>
 
   <div class="mobile-menu__services">
-    <a href="/profile.html" class="mobile-menu-services__item mobile-menu__login">Личный кабинет</a>
-    <a href="/wishlist.html" class="mobile-menu-services__item mobile-menu__wishlist" title="Избранное" aria-label="Избранное">
+    <a href="/profile.html" class="mobile-menu__services-item mobile-menu__login">Личный кабинет</a>
+    <a href="/wishlist.html" class="mobile-menu__services-item mobile-menu__wishlist" title="Избранное" aria-label="Избранное">
       Избранное
     </a>
-    <a href="/messenger-channels.html" class="mobile-menu-services__item mobile-menu__messages" aria-label="Сообщения" title="Сообщения">
+    <a href="/messenger-channels.html" class="mobile-menu__services-item mobile-menu__messages" aria-label="Сообщения" title="Сообщения">
       Сообщения
     </a>
   </div>
@@ -103,7 +103,7 @@
             <div class="product__price">250</div>
           </div>
         </a>
-        <button class="button product__wishlist" type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+        <button class="button button-wishlist  " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
           <svg>
             <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
           </svg>
@@ -119,7 +119,7 @@
             <div class="product__price">80</div>
           </div>
         </a>
-        <button class="button product__wishlist" type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+        <button class="button button-wishlist  " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
           <svg>
             <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
           </svg>
@@ -135,7 +135,7 @@
             <div class="product__price">90</div>
           </div>
         </a>
-        <button class="button product__wishlist" type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+        <button class="button button-wishlist  " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
           <svg>
             <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
           </svg>
@@ -151,7 +151,7 @@
             <div class="product__price">60</div>
           </div>
         </a>
-        <button class="button product__wishlist" type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+        <button class="button button-wishlist  " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
           <svg>
             <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
           </svg>
@@ -205,6 +205,7 @@
     </div>
   </div>
 </div>
+
 <script src="js/script.js"></script>
 </body>
 </html>

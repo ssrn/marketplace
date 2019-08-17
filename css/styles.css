@@ -527,15 +527,13 @@ body.is-fixed {
 
 .header-services__icon {
   display: flex; }
-
-.header-services__icon--heart {
-  width: 21px;
-  height: 24px;
-  color: #ccc; }
-
-.header-services__icon--message {
-  width: 24px;
-  height: 24px; }
+  .header-services__icon .icon-heart {
+    width: 21px;
+    height: 24px;
+    color: #ccc; }
+  .header-services__icon .icon-message {
+    width: 24px;
+    height: 24px; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-services__wishlist,
@@ -609,7 +607,7 @@ body.is-fixed {
   font-size: 21px;
   text-decoration: none; }
 
-.main-nav__trigger {
+.main-nav-trigger {
   position: relative;
   display: block;
   width: 42px;
@@ -621,10 +619,10 @@ body.is-fixed {
   transition: all .3s ease-in-out 0s;
   cursor: pointer; }
   @media only screen and (min-width: 768px) {
-    .main-nav__trigger {
+    .main-nav-trigger {
       display: none; } }
 
-.main-nav__trigger-line {
+.main-nav-trigger__line {
   position: absolute;
   left: 8px;
   display: block;
@@ -635,21 +633,21 @@ body.is-fixed {
   transform: rotate(0deg);
   transition: all .25s ease-in-out 0s;
   opacity: 1; }
-  .main-nav__trigger-line:nth-child(1) {
+  .main-nav-trigger__line:nth-child(1) {
     top: 8px; }
-  .main-nav__trigger-line:nth-child(2), .main-nav__trigger-line:nth-child(3) {
+  .main-nav-trigger__line:nth-child(2), .main-nav-trigger__line:nth-child(3) {
     top: 18px; }
-  .main-nav__trigger-line:nth-child(4) {
+  .main-nav-trigger__line:nth-child(4) {
     top: 28px; }
-  .main-nav__trigger.is-active .main-nav__trigger-line:nth-child(1) {
+  .main-nav-trigger.is-active .main-nav-trigger__line:nth-child(1) {
     top: 18px;
     left: 50%;
     width: 0; }
-  .main-nav__trigger.is-active .main-nav__trigger-line:nth-child(2) {
+  .main-nav-trigger.is-active .main-nav-trigger__line:nth-child(2) {
     transform: rotate(45deg); }
-  .main-nav__trigger.is-active .main-nav__trigger-line:nth-child(3) {
+  .main-nav-trigger.is-active .main-nav-trigger__line:nth-child(3) {
     transform: rotate(-45deg); }
-  .main-nav__trigger.is-active .main-nav__trigger-line:nth-child(4) {
+  .main-nav-trigger.is-active .main-nav-trigger__line:nth-child(4) {
     top: 18px;
     left: 50%;
     width: 0; }
@@ -683,7 +681,7 @@ body.is-fixed {
   .mobile-menu__services a {
     color: #fff; }
 
-.mobile-menu-services__item {
+.mobile-menu__services-item {
   display: block;
   padding: 12px 15px 12px 50px; }
 
@@ -717,7 +715,7 @@ body.is-fixed {
   top: 12px;
   right: 12px; }
 
-.icon--search {
+.icon-search {
   width: 20px;
   height: 20px; }
 
@@ -806,34 +804,34 @@ body.is-fixed {
   height: 12px;
   background-position: -16px 1px; }
 
-.products__wrap {
+.products {
   display: grid; }
 
-.products__wrap--table {
+.products--table {
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-gap: 30px; }
 
-.products__wrap--list {
+.products--list {
   grid-auto-rows: minmax(0, auto);
   grid-gap: 32px; }
 
 .product {
   position: relative; }
 
-.products__wrap--list .product__link {
+.products--list .product__link {
   display: flex;
   flex-wrap: wrap; }
 
 .product__img-wrap {
   height: 200px; }
-  .products__wrap--list .product__img-wrap {
+  .products--list .product__img-wrap {
     width: 200px;
     margin-right: 24px; }
   @media only screen and (min-width: 1200px) {
     .product--recommended .product__img-wrap {
       height: 270px; } }
 
-.product__wishlist {
+.button-wishlist {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -846,16 +844,16 @@ body.is-fixed {
   border-radius: 50%;
   cursor: default;
   outline: none; }
-  .products__wrap--list .product__wishlist {
+  .products--list .button-wishlist {
     left: 160px; }
-  .product__wishlist svg {
+  .button-wishlist svg {
     width: 100%;
     height: 100%;
     color: rgba(255, 255, 255, 0.9); }
-  .product--in-wishlist .product__wishlist svg {
+  .product--in-wishlist .button-wishlist svg {
     color: #2d2d2d;
     opacity: .9; }
-  .full-product .product__wishlist {
+  .full-product .button-wishlist {
     width: 36px;
     height: 36px; }
 
@@ -1268,7 +1266,7 @@ body.is-fixed {
   background: none;
   border: none; }
 
-.icon--plane {
+.iconplane {
   display: block;
   width: 24px;
   height: 24px;

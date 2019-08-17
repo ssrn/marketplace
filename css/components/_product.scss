@@ -3,7 +3,7 @@
 }
 
 .product__link {
-  .products__wrap--list & {
+  .products--list & {
     display: flex;
     flex-wrap: wrap;
   }
@@ -12,7 +12,7 @@
 .product__img-wrap {
   height: 200px;
 
-  .products__wrap--list & {
+  .products--list & {
     width: 200px;
     margin-right: 24px;
   }
@@ -24,7 +24,7 @@
   }
 }
 
-.product__wishlist {
+.button-wishlist {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -38,7 +38,7 @@
   cursor: default;
   outline: none;
 
-  .products__wrap--list & {
+  .products--list & {
     left: 160px;
   }
 

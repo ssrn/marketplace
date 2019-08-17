@@ -91,17 +91,17 @@
 
 .header-services__icon {
   display: flex;
-}
 
-.header-services__icon--heart {
-  width: 21px;
-  height: 24px;
-  color: #ccc;
-}
+  .icon-heart {
+    width: 21px;
+    height: 24px;
+    color: #ccc;
+  }
 
-.header-services__icon--message {
-  width: 24px;
-  height: 24px;
+  .icon-message {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .header-services__wishlist,
