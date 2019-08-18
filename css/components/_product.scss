@@ -99,7 +99,6 @@
 
 .full-product {
   display: grid;
-  grid-template-columns: minmax(0, auto);
   grid-gap: 30px;
 
   @include media(sm) {
@@ -109,6 +108,9 @@
 
 .full-product__left {
   position: relative;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .full-product__img {
@@ -133,7 +135,9 @@
 }
 
 .full-product__actions {
-  width: 320px;
+  @include media(sm) {
+    width: 320px;
+  }
 
   .button {
     width: 100%;
