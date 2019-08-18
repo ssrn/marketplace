@@ -1,6 +1,6 @@
 .main-nav {
   padding: 12px 15px;
-  background: #ffeada;
+  background: #f8f4ef;
 
   @include media(xs) {
     display: none;
@@ -23,6 +23,10 @@
   color: $text-primary;
   font-size: 21px;
   text-decoration: none;
+
+  &:hover {
+    color: $brand-contrast;
+  }
 }
 
 .main-nav-trigger {

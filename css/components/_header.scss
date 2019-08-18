@@ -27,6 +27,10 @@
   align-items: center;
   color: #3f6a03;
 
+  &:hover {
+    color: #3f6a03;
+  }
+
   span {
     display: none;
 
@@ -91,11 +95,15 @@
 
 .header-services__icon {
   display: flex;
+  color: #ccc;
+
+  &:hover {
+    color: darken(#ccc, 15%);
+  }
 
   .icon-heart {
     width: 21px;
     height: 24px;
-    color: #ccc;
   }
 
   .icon-message {
@@ -162,6 +170,12 @@
 }
 
 .page-header__button {
+  background: $brand-primary;
+
+  &:hover {
+    background-color: darken($brand-primary, 4%);
+  }
+
   @include media(ms, max) {
     display: none;
   }

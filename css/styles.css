@@ -317,23 +317,22 @@ form {
   display: inline-block;
   padding: 8px 13px;
   text-align: center;
-  border: none;
+  background: none;
+  border: 1px solid #ccc;
   cursor: pointer; }
+  .button:hover {
+    background-color: #f5f5f5; }
 
 .button--primary {
   color: #fff;
-  background-color: #879934; }
+  background-color: #f26a36;
+  border: none; }
   .button--primary:hover {
-    background-color: #7a8a2f; }
-
-.button--xl {
-  height: 70px;
-  line-height: 56px; }
+    background-color: #f15c23; }
 
 .button--l {
   width: 190px;
-  height: 50px;
-  line-height: 36px; }
+  height: 50px; }
 
 .button-group {
   margin: 0 0 0 -1px; }
@@ -364,6 +363,9 @@ a,
   color: #0091d9;
   text-decoration: none;
   transition: color .2s linear; }
+  a:hover,
+  .link:hover {
+    color: #f26a36; }
 
 body {
   color: #222;
@@ -475,6 +477,8 @@ body.is-fixed {
   display: flex;
   align-items: center;
   color: #3f6a03; }
+  .page-header__logo:hover {
+    color: #3f6a03; }
   .page-header__logo span {
     display: none; }
     @media only screen and (min-width: 992px) {
@@ -524,14 +528,16 @@ body.is-fixed {
   color: #fff;
   font-size: 10px;
   border-radius: 50%;
-  background: #E7003E; }
+  background: #f26a36; }
 
 .header-services__icon {
-  display: flex; }
+  display: flex;
+  color: #ccc; }
+  .header-services__icon:hover {
+    color: #a6a6a6; }
   .header-services__icon .icon-heart {
     width: 21px;
-    height: 24px;
-    color: #ccc; }
+    height: 24px; }
   .header-services__icon .icon-message {
     width: 24px;
     height: 24px; }
@@ -582,13 +588,17 @@ body.is-fixed {
   border-radius: 50%;
   overflow: hidden; }
 
-@media only screen and (max-width: 767px) {
-  .page-header__button {
-    display: none; } }
+.page-header__button {
+  background: #879934; }
+  .page-header__button:hover {
+    background-color: #7a8a2f; }
+  @media only screen and (max-width: 767px) {
+    .page-header__button {
+      display: none; } }
 
 .main-nav {
   padding: 12px 15px;
-  background: #ffeada; }
+  background: #f8f4ef; }
   @media only screen and (max-width: 479px) {
     .main-nav {
       display: none; } }
@@ -607,6 +617,8 @@ body.is-fixed {
   color: #222;
   font-size: 21px;
   text-decoration: none; }
+  .main-nav__link:hover {
+    color: #f26a36; }
 
 .main-nav-trigger {
   position: relative;
@@ -782,8 +794,7 @@ body.is-fixed {
       display: none; } }
 
 .catalog-filters-views__item {
-  padding: 8px 10px;
-  border: 1px solid #ccc; }
+  padding: 8px 10px; }
   .catalog-filters-views__item:first-child {
     margin-right: 8px; }
   .catalog-filters-views__item.is-active {
