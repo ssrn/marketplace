@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+  <meta charset="utf-8">
+  <title>Marketplace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+<header class="page-header">
+  <div class="page-header__inner container">
+    <a class="page-header__logo" href="/">
+      <img class="page-header__logo-img" src="img/four-leaves-logo.png" alt="">
+      <span>Veggieplace</span>
+    </a>
+
+    <form class="page-header__search search-form" role='search' action="/" method="get">
+      <label class="visually-hidden" for="header-search">Поиск</label>
+      <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
+      <div class="search-form__icon">
+        <svg class="icon-search">
+          <use xlink:href="../img/svg/search.svg#search"></use>
+        </svg>
+      </div>
+      <button class="visually-hidden" type="submit">Искать</button>
+    </form>
+
+    <div class="header-services">
+      <div class="header-services__inner">
+        <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
+          <span class="header-services__icon">
+            <svg class="icon-heart">
+              <use xlink:href="../img/svg/heart.svg#heart"></use>
+            </svg>
+          </span>
+        </a>
+        <a href="/profile/messenger" class="header-services__item header-services__messages" aria-label="Сообщения" title="Сообщения">
+          <span class="header-services__icon">
+            <svg class="icon-message">
+              <use xlink:href="../img/svg/message.svg#message"></use>
+            </svg>
+          </span>
+        </a>
+        <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
+        <div class="header-services__item header-services__profile">
+          <a href="#login" class="header-services__avatar">
+            C
+          </a>
+          <div class="header-services__profile-menu profile-menu">
+            <ul class="profile-menu__list">
+              <li class="profile-menu__item"><a href="/profile.html">Профиль</a></li>
+              <li class="profile-menu__item"><a href="">Мои объявления</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="/additem" class="page-header__button button button--primary">Продать урожай</a>
+
+    <button class="main-nav-trigger" type="button" title="Главное меню">
+      <span class="main-nav-trigger__line"></span>
+      <span class="main-nav-trigger__line"></span>
+      <span class="main-nav-trigger__line"></span>
+      <span class="main-nav-trigger__line"></span>
+    </button>
+  </div>
+</header>
+<nav class="main-nav">
+  <ul class="main-nav__list">
+    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
+    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
+    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
+    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
+  </ul>
+</nav>
+<main class="page-content">
+  <div class="add-product container">
+    <h1 class="page-title">Новое объявление</h1>
+    <form id="add-product-form" class="add-product__form" action="/" method="post">
+      <div class="form-item">
+        <label for="fld-category">Выберете категорию</label>
+        <div id="fld-category" class="form-select">
+          <select id="category" name="category_id" class="select--custom">
+            <option value="" class="js-root">Любая категория</option>
+            <option value="" class="js-root">Овощи</option>
+            <option value="">&nbsp; &nbsp;Огурцы</option>
+            <option value="">&nbsp; &nbsp;Помидоры</option>
+            <option value="" class="js-root">Фрукты</option>
+            <option value="">&nbsp; &nbsp;Яблоки</option>
+            <option value="">&nbsp; &nbsp;Груши</option>
+            <option value="">&nbsp; &nbsp;Сливы</option>
+            <option value="" class="js-root">Ягоды</option>
+            <option value="">&nbsp; &nbsp;Клубника</option>
+            <option value="">&nbsp; &nbsp;Малина</option>
+            <option value="">&nbsp; &nbsp;Вишня</option>
+            <option value="" class="js-root">Зелень</option>
+            <option value="">&nbsp; &nbsp;Салаты</option>
+            <option value="">&nbsp; &nbsp;Мята</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-item">
+        <label for="fld-product-name">Название объявления</label>
+        <input id="fld-product-name" class="" type="text" placeholder="" name="product-name" value="" maxlength="50">
+      </div>
+      <div class="form-item">
+        <label for="fld-product-desc">Описание объявления</label>
+        <textarea id="fld-product-desc" name="product-desc" rows="6" maxlength="3000" class="" placeholder=""></textarea>
+      </div>
+      <div class="form-item">
+        <label for="fld-product-price">Цена</label>
+        <input id="fld-product-price" class="" type="text" placeholder="" name="product-price" value="" maxlength="16">
+        <span class="number-format-currency">₽</span>
+      </div>
+      <div class="form-item">
+        <label for="fld-product-photos">Фотографии</label>
+        <input id="fld-product-photos" class="uploader-input-file" type="file" accept="image/gif,image/png,image/jpeg,image/pjpeg" multiple="" value="">
+      </div>
+      <div class="form-item">
+        <label for="fld-product-metro">Метро</label>
+        <input id="fld-product-metro" class="" type="text" placeholder="" name="product-name" value="" maxlength="50">
+      </div>
+      <button type="submit" class="button button--primary button--l">Опубликовать</button>
+    </form>
+  </div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

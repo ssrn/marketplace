@@ -346,7 +346,8 @@ form {
 
 textarea,
 input {
-  padding: 8px 16px; }
+  padding: 8px 16px;
+  border: 1px solid #ccc; }
 
 .form-item {
   margin-bottom: 16px; }
@@ -357,6 +358,14 @@ label {
 .form-checkbox__input {
   width: 16px;
   height: 16px; }
+
+.select--custom {
+  padding: 8px 16px;
+  border: 1px solid #ccc; }
+
+.select-icon {
+  position: absolute;
+  right: 8px; }
 
 a,
 .link {
@@ -1031,6 +1040,7 @@ body.is-fixed {
 .user-picture {
   height: 128px;
   width: 128px;
+  margin-bottom: 8px;
   border: 1px solid #ececec; }
 
 .profile-settings__title {
