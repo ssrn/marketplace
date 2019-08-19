@@ -24,6 +24,10 @@
 .button--l {
   width: 190px;
   height: 50px;
+
+  @include media(xs) {
+    width: 100%;
+  }
 }
 
 .button-group {

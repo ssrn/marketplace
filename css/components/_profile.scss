@@ -1,10 +1,25 @@
+.profile .page-content {
+  @include media(sm) {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-gap: 30px;
+  }
+
+  @include media(lg) {
+    grid-template-columns: 240px auto;
+  }
+}
+
 .profile-settings {
   margin-top: 24px;
 }
 
 .profile-settings__form {
   width: 100%;
-  max-width: 360px;
+
+  @include media(sm) {
+    max-width: 360px;
+  }
 
   input {
     width: 100%;

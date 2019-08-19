@@ -333,6 +333,9 @@ form {
 .button--l {
   width: 190px;
   height: 50px; }
+  @media only screen and (max-width: 479px) {
+    .button--l {
+      width: 100%; } }
 
 .button-group {
   margin: 0 0 0 -1px; }
@@ -400,7 +403,10 @@ h1 {
 
 h2 {
   margin: 1.4em 0;
-  font-size: 21px; }
+  font-size: 22px; }
+  @media only screen and (min-width: 768px) {
+    h2 {
+      font-size: 21px; } }
 
 h3 {
   margin: 1.4em 0; }
@@ -893,7 +899,6 @@ body.is-fixed {
     content: ' \20BD'; }
 
 .recommended-products__title {
-  font-size: 28px;
   font-weight: bold; }
 
 .recommended-products__wrap {
@@ -1038,12 +1043,23 @@ body.is-fixed {
   font-size: 18px;
   text-align: center; }
 
+@media only screen and (min-width: 768px) {
+  .profile .page-content {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-gap: 30px; } }
+@media only screen and (min-width: 1200px) {
+  .profile .page-content {
+    grid-template-columns: 240px auto; } }
+
 .profile-settings {
   margin-top: 24px; }
 
 .profile-settings__form {
-  width: 100%;
-  max-width: 360px; }
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .profile-settings__form {
+      max-width: 360px; } }
   .profile-settings__form input {
     width: 100%; }
 
