@@ -67,39 +67,41 @@
   </ul>
 </nav>
 <main class="page-content">
-  <div class="favorites container">
+  <div class="my-products container">
     <div class="products products--list">
-      <div class="product product--in-wishlist">
-        <a href="" class="product__link">
-          <div class="product__img-wrap">
-            <img class="product__img cropped-image" src="./img/strawberry.jpg" alt="">
-          </div>
-          <div class="product__desc">
-            <div class="product__name">Клубника</div>
-            <div class="product__price">250</div>
-          </div>
-        </a>
-        <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
-          <svg>
-            <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="product product--in-wishlist">
-        <a href="" class="product__link">
-          <div class="product__img-wrap">
-            <img class="product__img cropped-image" src="./img/cucumber.png" alt="">
-          </div>
-          <div class="product__desc">
-            <div class="product__name">Огурцы хрустящие</div>
-            <div class="product__price">80</div>
-          </div>
-        </a>
-        <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
-          <svg>
-            <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
-          </svg>
-        </button>
+     <div class="my-product">
+       <div class="product">
+         <a href="" class="product__link">
+           <div class="product__img-wrap">
+             <img class="product__img cropped-image" src="./img/strawberry.jpg" alt="">
+           </div>
+           <div class="product__desc">
+             <div class="product__name">Клубника</div>
+             <div class="product__price">250</div>
+           </div>
+         </a>
+       </div>
+       <div class="my-product__actions">
+         <a class="my-product__actions-item" href="">Редактировать</a>
+         <button class="my-product__actions-item">Удалить</button>
+       </div>
+     </div>
+      <div class="my-product">
+        <div class="product">
+          <a href="" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img cropped-image" src="./img/cucumber.png" alt="">
+            </div>
+            <div class="product__desc">
+              <div class="product__name">Огурцы хрустящие</div>
+              <div class="product__price">80</div>
+            </div>
+          </a>
+        </div>
+        <div class="my-product__actions">
+          <a class="my-product__actions-item" href="">Редактировать</a>
+          <button class="my-product__actions-item">Удалить</button>
+        </div>
       </div>
     </div>
   </div>

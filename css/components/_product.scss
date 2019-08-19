@@ -147,3 +147,15 @@
 .full-product__buy {
   margin-bottom: 16px;
 }
+
+.my-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.my-product__actions-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+}

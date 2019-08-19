@@ -567,7 +567,6 @@ body.is-fixed {
   position: absolute;
   top: 100%;
   max-height: 0;
-  margin-top: 8px;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -590,16 +589,20 @@ body.is-fixed {
   align-items: center;
   width: 32px;
   height: 32px;
-  margin: auto 8px auto 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
   color: #fff;
   font-size: 18px;
   background: #0091d9;
   border-radius: 50%;
   overflow: hidden; }
+  .header-services__avatar:hover {
+    color: #fff; }
 
 .page-header__button {
   background: #879934; }
   .page-header__button:hover {
+    color: #fff;
     background-color: #7a8a2f; }
   @media only screen and (max-width: 767px) {
     .page-header__button {
@@ -941,6 +944,16 @@ body.is-fixed {
 
 .full-product__buy {
   margin-bottom: 16px; }
+
+.my-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.my-product__actions-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px; }
 
 .dialog {
   position: fixed;
