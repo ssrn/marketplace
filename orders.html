@@ -75,46 +75,62 @@
       <li><a href="/profile.html">Настройки</a></li>
     </ul>
   </div>
-  <div class="my-products">
-    <div class="products products--list">
-     <div class="my-product">
-       <div class="product">
-         <a href="" class="product__link">
-           <div class="product__img-wrap">
-             <img class="product__img cropped-image" src="./img/strawberry.jpg" alt="">
-           </div>
-           <div class="product__desc">
-             <div class="product__name">Клубника</div>
-             <div class="product__price">250</div>
-           </div>
-         </a>
-       </div>
-       <div class="my-product__actions">
-         <a class="my-product__actions-item" href="">Редактировать</a>
-         <button class="my-product__actions-item">Снять с публикации</button>
-         <button class="my-product__actions-item">Удалить</button>
-       </div>
-     </div>
-      <div class="my-product">
-        <div class="product">
-          <a href="" class="product__link">
-            <div class="product__img-wrap">
-              <img class="product__img cropped-image" src="./img/cucumber.png" alt="">
-            </div>
-            <div class="product__desc">
-              <div class="product__name">Огурцы хрустящие</div>
-              <div class="product__price">80</div>
-            </div>
-          </a>
-        </div>
-        <div class="my-product__actions">
-          <a class="my-product__actions-item" href="">Редактировать</a>
-          <button class="my-product__actions-item">Снять с публикации</button>
-          <button class="my-product__actions-item">Удалить</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  <table class="orders">
+    <thead>
+    <tr>
+      <th>Номер заказа</th>
+      <th>Дата</th>
+      <th>Пользователь</th>
+      <th>Итого</th>
+      <th>Состояние</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+      <td>3</td>
+      <td>17 июля, 2019 - 19:18</td>
+      <td>ekalinicheva@gmail.com</td>
+      <td>350₽</td>
+      <td>
+        <select id="status" name="status" >
+          <option value="">Новый</option>
+          <option value="">В обработке</option>
+          <option value="">Оплачен</option>
+          <option value="">Завершен</option>
+        </select>
+      </td>
+    </tr>
+    <tr class="even">
+      <td>2</td>
+      <td>22 июня, 2019 - 12:53</td>
+      <td>poberezhnii893255@mail.ru</td>
+      <td>710₽</td>
+      <td>
+        <select id="status" name="status" >
+          <option value="">Новый</option>
+          <option value="">В обработке</option>
+          <option value="">Оплачен</option>
+          <option value="" selected="selected">Завершен</option>
+        </select>
+      </td>
+    </tr>
+    <tr class="odd">
+      <td>1</td>
+      <td>01 июня, 2019 - 07:36</td>
+      <td>ekalinicheva@gmail.com</td>
+      <td>190₽</td>
+      <td>
+        <select id="status" name="status" >
+          <option value="">Новый</option>
+          <option value="">В обработке</option>
+          <option value="">Оплачен</option>
+          <option value="" selected="selected">Завершен</option>
+        </select>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 </main>
 
 <script src="js/script.js"></script>
