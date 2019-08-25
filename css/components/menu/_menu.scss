@@ -1,6 +1,7 @@
 .main-nav {
   padding: 12px 15px;
-  background: #f8f4ef;
+  //background: #f8f4ef;
+  background: rgba(244, 118, 33, .1);
 
   @include media(xs) {
     display: none;
