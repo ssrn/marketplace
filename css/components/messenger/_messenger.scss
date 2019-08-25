@@ -30,6 +30,7 @@
 .messages-header {
   display: flex;
   flex-wrap: wrap;
+  min-height: 65px;
   padding: 10px;
   background-color: #f7f7fa;
   border-bottom: 1px solid #f1f1f1;
@@ -189,7 +190,7 @@
   border: none;
 }
 
-.iconplane {
+.icon-plane {
   display: block;
   width: 24px;
   height: 24px;
