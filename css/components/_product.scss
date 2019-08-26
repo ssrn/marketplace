@@ -12,6 +12,10 @@
 .product__img-wrap {
   height: 200px;
 
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+
   .products--list & {
     width: 200px;
     margin-right: 24px;
@@ -21,6 +25,31 @@
     @include media(lg) {
       height: 270px;
     }
+  }
+}
+
+.product__desc {
+  margin-top: 12px;
+}
+
+.product__name {
+  margin: 0;
+  color: $text-primary;
+  line-height: 1;
+  letter-spacing: .018em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product__price {
+  margin-top: 8px;
+  color: $text-primary;
+  font-size: 18px;
+  font-weight: bolder;
+
+  &:after {
+    content: ' \20BD';
   }
 }
 
@@ -60,22 +89,6 @@
   .full-product & {
     width: 36px;
     height: 36px;
-  }
-}
-
-.product__desc {
-  margin-top: 12px;
-}
-
-.product__name {
-  color: $text-primary;
-}
-
-.product__price {
-  color: $text-primary;
-
-  &:after {
-    content: ' \20BD';
   }
 }
 

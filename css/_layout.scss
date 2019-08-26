@@ -17,9 +17,11 @@ body.is-fixed {
 
 .page-content {
   margin-top: 16px;
+  margin-bottom: 16px;
 
   @include media(sm) {
     margin-top: 48px;
+    margin-bottom: 100px;
   }
 }
 
