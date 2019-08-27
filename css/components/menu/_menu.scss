@@ -1,5 +1,5 @@
 .main-nav {
-  padding: 12px 15px;
+  padding: 12px 0;
   //background: #f8f4ef;
   //background: rgba(244, 118, 33, .1);
   background: $fnb-extra;
@@ -12,16 +12,17 @@
 .main-nav__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  margin: 0 -32px;
+  padding-left: 300px;
 }
 
 .main-nav__item {
   display: inline-block;
+  margin: 0 32px;
 }
 
 .main-nav__link {
   display: block;
-  padding: 0 16px;
   color: #fff;
   font-size: 21px;
   text-decoration: none;

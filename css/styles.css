@@ -585,10 +585,12 @@ body.is-fixed {
     height: 24px; }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .header-services__wishlist,
-  .header-services__messages,
-  .header-services__products {
+  .header-services__wishlist {
     display: none; } }
+
+.header-services__messages,
+.header-services__products {
+  display: none; }
 
 .header-services__login {
   color: #0091d9; }
@@ -633,6 +635,8 @@ body.is-fixed {
     color: #fff; }
 
 .page-header__button {
+  padding-right: 20px;
+  padding-left: 20px;
   background: #879934; }
   .page-header__button:hover {
     color: #fff;
@@ -642,7 +646,7 @@ body.is-fixed {
       display: none; } }
 
 .main-nav {
-  padding: 12px 15px;
+  padding: 12px 0;
   background: #ba529f; }
   @media only screen and (max-width: 479px) {
     .main-nav {
@@ -651,14 +655,15 @@ body.is-fixed {
 .main-nav__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  margin: 0 -32px;
+  padding-left: 300px; }
 
 .main-nav__item {
-  display: inline-block; }
+  display: inline-block;
+  margin: 0 32px; }
 
 .main-nav__link {
   display: block;
-  padding: 0 16px;
   color: #fff;
   font-size: 21px;
   text-decoration: none; }
@@ -791,14 +796,16 @@ body.is-fixed {
   max-width: 800px;
   background: #fff;
   margin: 16px;
-  padding: 24px 5.5% 0;
+  padding: 36px 3.8% 0;
   text-align: center; }
 
 .banner__title {
+  margin-bottom: 0;
   letter-spacing: .018em; }
 
 .banner__desc {
   margin-bottom: 0;
+  margin-top: .6em;
   color: #858585;
   font-size: 22px; }
 
@@ -919,8 +926,6 @@ body.is-fixed {
 
 .product__img-wrap {
   height: 200px; }
-  .product__img-wrap:hover {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
   .products--list .product__img-wrap {
     width: 200px;
     margin-right: 24px; }
@@ -934,16 +939,15 @@ body.is-fixed {
 .product__name {
   margin: 0;
   color: #222;
-  line-height: 1;
   letter-spacing: .018em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
 .product__price {
-  margin-top: 8px;
+  margin-top: 4px;
   color: #222;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bolder; }
   .product__price:after {
     content: ' \20BD'; }

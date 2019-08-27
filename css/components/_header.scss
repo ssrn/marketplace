@@ -115,12 +115,15 @@
   }
 }
 
-.header-services__wishlist,
-.header-services__messages,
-.header-services__products {
+.header-services__wishlist {
   @include media(sm, between) {
     display: none;
   }
+}
+
+.header-services__messages,
+.header-services__products {
+  display: none;
 }
 
 .header-services__login {
@@ -177,6 +180,8 @@
 }
 
 .page-header__button {
+  padding-right: 20px;
+  padding-left: 20px;
   background: $brand-primary;
 
   &:hover {

@@ -12,10 +12,6 @@
 .product__img-wrap {
   height: 200px;
 
-  &:hover {
-    box-shadow: $box-shadow;
-  }
-
   .products--list & {
     width: 200px;
     margin-right: 24px;
@@ -35,7 +31,6 @@
 .product__name {
   margin: 0;
   color: $text-primary;
-  line-height: 1;
   letter-spacing: .018em;
   white-space: nowrap;
   overflow: hidden;
@@ -43,9 +38,9 @@
 }
 
 .product__price {
-  margin-top: 8px;
+  margin-top: 4px;
   color: $text-primary;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bolder;
 
   &:after {

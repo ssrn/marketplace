@@ -13,16 +13,18 @@
   max-width: 800px;
   background: #fff;
   margin: 16px;
-  padding: 24px 5.5% 0;
+  padding: 36px 3.8% 0;
   text-align: center;
 }
 
 .banner__title {
+  margin-bottom: 0;
   letter-spacing: .018em;
 }
 
 .banner__desc {
   margin-bottom: 0;
+  margin-top: .6em;
   color: $text-grey;
   font-size: 22px;
 }
