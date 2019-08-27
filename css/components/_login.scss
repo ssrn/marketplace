@@ -2,7 +2,7 @@
   width: 360px;
 
   .action-button {
-    height: 40px;
+    height: 48px;
     width: 100%;
     margin-bottom: 12px;
   }
@@ -18,24 +18,35 @@
 
 .button--social-account {
   display: block;
-  height: 40px;
+  height: 48px;
+  line-height: 30px;
   margin: 12px 0;
   padding-left: 48px;
   color: #fff;
   text-align: left;
   background-repeat: no-repeat;
-  background-position: 4px 4px;
+  background-position: 4px center;
   overflow: hidden;
 }
 
 .button--vk {
   background-color: #4d75a3;
   background-image: url(../../img/svg/login-logo-vk.svg);
+
+  &:hover {
+    color: #fff;
+    background-color: #4d75a3;
+  }
 }
 
 .button--fb {
   background-color: #3b5998;
   background-image: url(../../img/svg/login-logo-fb.svg);
+
+  &:hover {
+    color: #fff;
+    background-color: #3b5998;
+  }
 }
 
 .login__divider {

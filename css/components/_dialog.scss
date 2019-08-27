@@ -23,18 +23,22 @@
   background: #fff;
   border: 1px solid rgba(0,0,0,.5);
   box-shadow: 0 1px 16px rgba(0,0,0,.25);
-  overflow-x: hidden;
 }
 
 .dialog__close {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: -5px;
+  right: -36px;
   width: 32px;
   height: 32px;
-  background: #fff url(../../img/svg/close-cross.svg) center center;
+  background: url(../../img/svg/close-cross.svg) center center;
   border: none;
   cursor: pointer;
+  opacity: .8;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .dialog__content {

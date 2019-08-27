@@ -67,52 +67,85 @@
 </nav>
 <main class="page-content container">
   <div class="favorites">
-    <div class="products products--list">
-      <div class="my-product">
-        <div class="product product--in-wishlist">
-          <a href="" class="product__link">
-            <div class="product__img-wrap">
-              <img class="product__img cropped-image" src="./img/strawberry.jpg" alt="">
-            </div>
-            <div class="product__desc">
-              <div class="product__name">Клубника</div>
-              <div class="product__price">250</div>
-            </div>
-          </a>
-          <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
-            <svg>
-              <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="my-product__actions">
-          <button class="my-product__actions-item">Удалить</button>
-        </div>
+    <div class="products products--table">
+      <div class="product product--in-wishlist">
+        <a href="" class="product__link">
+          <div class="product__img-wrap">
+            <img class="product__img cropped-image" src="img/products/strawberry2.jpg" alt="">
+          </div>
+          <div class="product__desc">
+            <h3 class="product__name">Клубника</h3>
+            <div class="product__price">250</div>
+          </div>
+        </a>
+        <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+          <svg>
+            <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
+          </svg>
+        </button>
       </div>
-      <div class="my-product">
-        <div class="product product--in-wishlist">
-          <a href="" class="product__link">
-            <div class="product__img-wrap">
-              <img class="product__img cropped-image" src="./img/cucumber.png" alt="">
-            </div>
-            <div class="product__desc">
-              <div class="product__name">Огурцы хрустящие</div>
-              <div class="product__price">80</div>
-            </div>
-          </a>
-          <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
-            <svg>
-              <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="my-product__actions">
-          <button class="my-product__actions-item">Удалить</button>
-        </div>
+      <div class="product product--in-wishlist">
+        <a href="" class="product__link">
+          <div class="product__img-wrap">
+            <img class="product__img cropped-image" src="./img/products/cucumber.png" alt="">
+          </div>
+          <div class="product__desc">
+            <h3 class="product__name">Огурцы хрустящие</h3>
+            <div class="product__price">80</div>
+          </div>
+        </a>
+        <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+          <svg>
+            <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
 </main>
+
+<!-- Use  role="dialog" aria-labelledby="dialog1Title" aria-hidden="true" tabindex="-1" -->
+<div id="login" class="dialog dialog-login">
+  <div class="dialog__inner">
+    <button class="dialog__close" aria-label="Закрыть"></button>
+    <div class="dialog__content">
+      <div class="dialog__content-wrapper">
+        <div class="login">
+          <div class="login__half">
+            <div class="login__social-buttons">
+              <a href="/auth/vk" class="button button--social-account button--vk">
+                Вконтакте
+              </a>
+              <a href="/auth/facebook" class="button button--social-account button--fb">
+                Facebook
+              </a>
+            </div>
+          </div>
+
+          <div class="login__divider">Или</div>
+
+          <div class="login__half">
+            <form class="login-form form" method="post">
+              <div class="login__form-item">
+                <label>
+                  <input name="login" placeholder="Телефон или электронная почта" type="text" value="">
+                </label>
+              </div>
+              <div class="login__form-item">
+                <label>
+                  <input name="password" placeholder="Пароль" autocomplete="off" type="password" value="">
+                </label>
+              </div>
+              <div id="login-error"></div>
+              <button class="button button--primary action-button" type="submit">Войти</button>
+              <div class="login-form__lost link">Забыли пароль?</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="js/script.js"></script>
 </body>

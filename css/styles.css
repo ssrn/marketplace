@@ -350,7 +350,7 @@ form {
 textarea,
 input {
   width: 100%;
-  padding: 8px 16px;
+  padding: 14px 16px;
   border: 1px solid #ccc; }
 
 .form-item {
@@ -771,11 +771,13 @@ body.is-fixed {
   position: relative; }
 
 .search-form__input {
-  width: 100%; }
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .search-form__icon {
   position: absolute;
-  top: 8px;
+  top: 10px;
   right: 12px; }
 
 .icon-search {
@@ -822,12 +824,6 @@ body.is-fixed {
     color: #fff;
     transform: translateY(20px); }
 
-@media only screen and (min-width: 992px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "a a a a" "b c c c" "b c c c"; } }
-
 .catalog h1 {
   grid-area: a; }
   @media only screen and (min-width: 992px) {
@@ -836,6 +832,7 @@ body.is-fixed {
       width: 75%; } }
 
 .catalog-sidebar {
+  display: none;
   grid-area: b; }
 
 .catalog-content {
@@ -926,6 +923,8 @@ body.is-fixed {
 
 .product__img-wrap {
   height: 200px; }
+  .product:hover .product__img-wrap {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4); }
   .products--list .product__img-wrap {
     width: 200px;
     margin-right: 24px; }
@@ -1069,18 +1068,20 @@ body.is-fixed {
   max-height: 95%;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.25);
-  overflow-x: hidden; }
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.25); }
 
 .dialog__close {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: -5px;
+  right: -36px;
   width: 32px;
   height: 32px;
-  background: #fff url(../../img/svg/close-cross.svg) center center;
+  background: url(../../img/svg/close-cross.svg) center center;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: .8; }
+  .dialog__close:hover {
+    opacity: 1; }
 
 .dialog__content {
   padding: 24px 32px; }
@@ -1097,7 +1098,7 @@ body.is-fixed {
 .login {
   width: 360px; }
   .login .action-button {
-    height: 40px;
+    height: 48px;
     width: 100%;
     margin-bottom: 12px; }
 
@@ -1108,22 +1109,29 @@ body.is-fixed {
 
 .button--social-account {
   display: block;
-  height: 40px;
+  height: 48px;
+  line-height: 30px;
   margin: 12px 0;
   padding-left: 48px;
   color: #fff;
   text-align: left;
   background-repeat: no-repeat;
-  background-position: 4px 4px;
+  background-position: 4px center;
   overflow: hidden; }
 
 .button--vk {
   background-color: #4d75a3;
   background-image: url(../../img/svg/login-logo-vk.svg); }
+  .button--vk:hover {
+    color: #fff;
+    background-color: #4d75a3; }
 
 .button--fb {
   background-color: #3b5998;
   background-image: url(../../img/svg/login-logo-fb.svg); }
+  .button--fb:hover {
+    color: #fff;
+    background-color: #3b5998; }
 
 .login__divider {
   margin: 24px 0;
