@@ -1,11 +1,15 @@
 .search-form {
   position: relative;
+
+  @include media(xs) {
+    flex-grow: 1;
+  }
 }
 
 .search-form__input {
-  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  visibility: hidden;
 }
 
 .search-form__icon {

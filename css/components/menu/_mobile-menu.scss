@@ -1,6 +1,6 @@
 .mobile-menu {
   position: fixed;
-  top: 65px;
+  top: 127px;
   //bottom: 0;
   display: none;
   width: 100%;
@@ -12,16 +12,20 @@
   //background-color: rgba(135, 153, 52, 0.97);
   background: #fff;
   //box-shadow: $box-shadow;
-  box-shadow: 0 4px 6px -2px #ccc;
+  box-shadow: 0 4px 8px 0 #ccc;
   z-index: 1;
 
   &.is-active {
     display: block;
+
+    @media screen and (min-width: 940px) {
+      display: none;
+    }
   }
 }
 
 .mobile-main-nav {
-  padding-top: 8px;
+  padding-top: 14px;
   padding-bottom: 16px;
 }
 
@@ -47,7 +51,8 @@
 }
 
 .mobile-menu__login {
-  background: url("../../../img/svg/user.svg") no-repeat 15px center;
+  color: #fff;
+  background: url("../../../img/svg/user-mobile.svg") no-repeat 15px center;
   background-size: 20px;
 }
 
@@ -63,8 +68,10 @@
 
 .mobile-menu__button {
   display: block;
-  padding: 20px 15px 20px 50px;
+  padding: 24px 15px 24px 50px;
   color: $brand-primary;
   background: url("../../../img/svg/plus-in-circle.svg") no-repeat 15px center;
   background-size: 20px;
 }
+
+

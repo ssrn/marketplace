@@ -8,63 +8,116 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
+
+<div class="switch-container container">
+  <label class="switch">
+    Login
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+</div>
+
 <header class="page-header">
-  <div class="page-header__inner container">
-    <a class="page-header__logo" href="/">
-      <img class="page-header__logo-img" src="./img/FNB_logo.png" alt="">
-    </a>
+  <div class="container">
 
-    <form class="page-header__search search-form" role='search' action="/" method="get">
-      <label class="visually-hidden" for="header-search">Поиск</label>
-      <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
-      <div class="search-form__icon">
-        <svg class="icon-search">
-          <use xlink:href="../img/svg/search.svg#search"></use>
-        </svg>
-      </div>
-      <button class="visually-hidden" type="submit">Искать</button>
-    </form>
+    <div class="page-header__inner">
+      <a class="page-header__logo" href="/">
+        <img class="page-header__logo-img" src="./img/FNB_logo.png" alt="">
+      </a>
 
-    <div class="header-services">
-      <div class="header-services__inner">
-        <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
+      <nav class="main-nav">
+        <div class="main-nav__inner-wrap container">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-header__right">
+        <form class="page-header__search search-form" role='search' action="/" method="get">
+          <label class="visually-hidden" for="header-search">Поиск</label>
+          <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
+          <div class="search-form__icon">
+            <svg class="icon-search">
+              <use xlink:href="../img/svg/search.svg#search"></use>
+            </svg>
+          </div>
+          <button class="visually-hidden" type="submit">Искать</button>
+        </form>
+
+        <div class="header-services">
+          <div class="header-services__inner">
+            <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
           <span class="header-services__icon">
             <svg class="icon-heart">
               <use xlink:href="../img/svg/heart.svg#heart"></use>
             </svg>
           </span>
-        </a>
-        <a href="/profile/messenger" class="header-services__item header-services__messages" aria-label="Сообщения" title="Сообщения">
-          <span class="header-services__icon">
+            </a>
+            <a href="/messenger-channels.html" class="header-services__item header-services__messages logged-in-only" aria-label="Сообщения" title="Сообщения">
+              <span class="header-services__icon">
             <svg class="icon-message">
               <use xlink:href="../img/svg/message.svg#message"></use>
             </svg>
           </span>
-        </a>
-        <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
-        <a href="#login" class="header-services__item header-services__login">Вход и регистрация</a>
+              <div class="notify-number">2</div>
+            </a>
+            <a href="/orders.html" class="header-services__item header-services__products logged-in-only">Мои объявления</a>
+
+            <a href="#login" class="header-services__item header-services__login unlogged-only">
+              <span class="header-services__icon">
+            <svg class="icon-user">
+              <use xlink:href="../img/svg/user.svg#user"></use>
+            </svg>
+          </span>
+            </a>
+
+            <div class="header-services__item header-services__profile logged-in-only">
+              <a href="/profile.html" class="header-services__avatar">
+                C
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/add-product.html" class="page-header__button button button--primary">Продать урожай</a>
+
+        <button class="main-nav-trigger" type="button" title="Главное меню">
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+        </button>
       </div>
     </div>
-
-    <a href="/additem" class="page-header__button button button--primary">Продать урожай</a>
-
-    <button class="main-nav-trigger" type="button" title="Главное меню">
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-    </button>
   </div>
 </header>
+<div class="mobile-menu">
+  <nav class="mobile-main-nav">
+    <ul class="mobile-main-nav__list">
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Овощи</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Фрукты</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Ягоды</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Зелень</a></li>
+    </ul>
+  </nav>
 
-<nav class="main-nav">
-  <ul class="main-nav__list container">
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
-  </ul>
-</nav>
+  <div class="mobile-menu__services">
+    <a href="/profile.html" class="mobile-menu__services-item mobile-menu__login">Личный кабинет</a>
+    <a href="/wishlist.html" class="mobile-menu__services-item mobile-menu__wishlist" title="Избранное" aria-label="Избранное">
+      Избранное
+    </a>
+    <a href="/messenger-channels.html" class="mobile-menu__services-item mobile-menu__messages logged-in-only" aria-label="Сообщения" title="Сообщения">
+      Сообщения
+    </a>
+  </div>
+
+  <a href="/add-product.html" class="mobile-menu__button">Продать урожай</a>
+
+</div>
 
 <main class="page-content container">
   <div class="catalog">
@@ -152,11 +205,11 @@
         <div class="product">
           <a href="/product-page.html" class="product__link">
             <div class="product__img-wrap">
-              <img class="product__img cropped-image" src="./img/products/strawberry.jpg" alt="" loading="lazy">
+              <img class="product__img cropped-image" src="./img/products/beetroot.jpg" alt="" loading="lazy">
             </div>
             <div class="product__desc">
-              <h3 class="product__name">Клубника</h3>
-              <div class="product__price">250</div>
+              <h3 class="product__name">Свекла сладкая</h3>
+              <div class="product__price">20</div>
             </div>
           </a>
           <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
@@ -186,27 +239,10 @@
         <div class="product">
           <a href="/product-page.html" class="product__link">
             <div class="product__img-wrap">
-              <img class="product__img cropped-image" src="./img/products/apples.jpg" alt="" loading="lazy">
+              <img class="product__img cropped-image" src="./img/products/pumpkin.jpg" alt="" loading="lazy">
             </div>
             <div class="product__desc">
-              <h3 class="product__name">Яблоки "Ред Делишес"</h3>
-              <div class="product__price">90</div>
-            </div>
-          </a>
-          <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
-            <svg>
-              <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
-            </svg>
-          </button>
-        </div>
-
-        <div class="product">
-          <a href="/product-page.html" class="product__link">
-            <div class="product__img-wrap">
-              <img class="product__img cropped-image" src="./img/products/spinach.jpg" alt="" loading="lazy">
-            </div>
-            <div class="product__desc">
-              <h3 class="product__name">Шпинат свежий</h3>
+              <h3 class="product__name">Тыква</h3>
               <div class="product__price">60</div>
             </div>
           </a>
@@ -220,11 +256,11 @@
         <div class="product">
           <a href="/product-page.html" class="product__link">
             <div class="product__img-wrap">
-              <img class="product__img cropped-image" src="./img/products/apples.jpg" alt="" loading="lazy">
+              <img class="product__img cropped-image" src="./img/products/potato.jpg" alt="" loading="lazy">
             </div>
             <div class="product__desc">
-              <h3 class="product__name">Яблоко молодое белый налив</h3>
-              <div class="product__price">60</div>
+              <h3 class="product__name">Картофель рассыпчатый</h3>
+              <div class="product__price">30</div>
             </div>
           </a>
           <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
@@ -237,11 +273,79 @@
         <div class="product">
           <a href="/product-page.html" class="product__link">
             <div class="product__img-wrap">
-              <img class="product__img cropped-image" src="./img/products/strawberry2.jpg" alt="" loading="lazy">
+              <img class="product__img cropped-image" src="./img/products/carrot.jpg" alt="" loading="lazy">
             </div>
             <div class="product__desc">
-              <h3 class="product__name">Клубника ароматная</h3>
-              <div class="product__price">140</div>
+              <h3 class="product__name">Морковь витаминная</h3>
+              <div class="product__price">50</div>
+            </div>
+          </a>
+          <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+            <svg>
+              <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="product">
+          <a href="/product-page.html" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img cropped-image" src="./img/products/tomato.jpg" alt="" loading="lazy">
+            </div>
+            <div class="product__desc">
+              <h3 class="product__name">Помидоры на ветке</h3>
+              <div class="product__price">110</div>
+            </div>
+          </a>
+          <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+            <svg>
+              <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="product">
+          <a href="/product-page.html" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img cropped-image" src="./img/products/beetroot.jpg" alt="" loading="lazy">
+            </div>
+            <div class="product__desc">
+              <h3 class="product__name">Свекла</h3>
+              <div class="product__price">25</div>
+            </div>
+          </a>
+          <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+            <svg>
+              <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="product">
+          <a href="" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img cropped-image" src="./img/products/cucumber.png" alt="" loading="lazy">
+            </div>
+            <div class="product__desc">
+              <h3 class="product__name">Огурцы ранние</h3>
+              <div class="product__price">100</div>
+            </div>
+          </a>
+          <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+            <svg>
+              <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="product">
+          <a href="/product-page.html" class="product__link">
+            <div class="product__img-wrap">
+              <img class="product__img cropped-image" src="./img/products/potato.jpg" alt="" loading="lazy">
+            </div>
+            <div class="product__desc">
+              <h3 class="product__name">Картофель</h3>
+              <div class="product__price">55</div>
             </div>
           </a>
           <button class="button button-wishlist " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">

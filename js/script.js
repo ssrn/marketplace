@@ -60,7 +60,27 @@ const dialogHandler = () => {
   });
 };
 
+const switchLogin = () => {
+  const checkbox = document.querySelector(".switch input");
+
+  checkbox.checked = false;
+
+  checkbox.addEventListener( 'change', function() {
+    document.body.classList.toggle('logged-in')
+  });
+};
+
+showSearch = () => {
+  const searchIcon = document.querySelector(".search-form__icon");
+
+  searchIcon.addEventListener( 'click', function() {
+    document.querySelector(".search-form__input").style.visibility = "visible";
+  });
+};
+
 mobileMenuHandler();
 catalogViewHandler();
 catalogFiltersHandler();
 dialogHandler();
+switchLogin();
+showSearch();

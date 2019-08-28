@@ -42,10 +42,10 @@
 }
 
 .product__price {
-  margin-top: 4px;
   color: $text-primary;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: 500;
 
   &:after {
     content: ' \20BD';

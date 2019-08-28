@@ -1,46 +1,48 @@
 .page-header {
-   padding: 12px 0;
+  background: #f8f4ef;
+  border-bottom: 1px solid #ccc;
 
-  @include media(sm) {
-    padding: 16px 0;
+  .container {
+    @media screen and (max-width: 1559px) {
+      max-width: 100%;
+    }
   }
+}
 
-  @include media(lg) {
-    padding: 12px 0;
-  }
-
-  @include media(ms, max) {
-    border-bottom: 1px solid #ccc;
+.switch-container {
+  @media screen and (max-width: 1559px) {
+    max-width: 100%;
   }
 }
 
 .page-header__inner {
   position: relative;
-  display: grid;
-  grid-template-columns: min-content minmax(auto, 500px) auto;
-  grid-column-gap: 30px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
-  @include media(sm) {
-    grid-template-columns: auto minmax(auto, 450px) auto;
-    padding-left: 150px;
-  }
-
-  @include media(lg) {
-    padding-left: 255px;
+  @media screen and (min-width: 1560px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
-.page-header__logo {
-  @include media(sm) {
-    position: absolute;
-    left: 15px;
-    top: -12px;
-  }
+.page-header__right {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
 
-  @include media(lg) {
-    top: -6px;
+.page-header__logo {
+  margin-right: 30px;
+
+  @media screen and (min-width: 1560px) {
+    position: absolute;
+    left: -125px;
+    top: 8px;
   }
 }
 
@@ -48,21 +50,22 @@
   width: 48px;
   max-width: inherit;
 
-  @include media(sm) {
+  @include media(md) {
     width: 56px;
   }
 
-  @include media(lg) {
+  @media screen and (min-width: 1560px) {
     width: 96px;
   }
 }
 
 /* Header services*/
 .header-services {
+  display: flex;
+  flex-wrap: wrap;
   justify-self: end;
-  font-size: 15px;
 
-  @include media(ms, max) {
+  @include media(xs) {
     display: none;
   }
 }
@@ -70,14 +73,18 @@
 .header-services__inner {
   display: inline-flex;
   align-items: center;
-  margin: 0 -5px;
 }
 
 .header-services__item {
   position: relative;
   display: inline-block;
+  margin: 0 10px;
   padding: 0 5px;
   color: $text-primary;
+
+  body.logged-in &:first-child {
+    margin: 0 0 0 4px;
+  }
 }
 
 .notify-number {
@@ -98,10 +105,10 @@
 
 .header-services__icon {
   display: flex;
-  color: #ccc;
+  color: #a6a6a6;
 
   &:hover {
-    color: darken(#ccc, 15%);
+    color: darken(#a6a6a6, 15%);
   }
 
   .icon-heart {
@@ -115,19 +122,17 @@
   }
 }
 
-.header-services__wishlist {
-  @include media(sm, between) {
-    display: none;
+.header-services__products {
+  @media screen and (max-width: 1279px) {
+    display: none !important;
   }
 }
 
-.header-services__messages,
-.header-services__products {
-  display: none;
-}
-
 .header-services__login {
-  color: $link-color;
+  .icon-user {
+    width: 19px;
+    height: 19px;
+  }
 }
 
 .header-services__profile {
@@ -166,11 +171,9 @@
   align-items: center;
   width: 32px;
   height: 32px;
-  margin-top: 8px;
-  margin-bottom: 8px;
   color: #fff;
   font-size: 18px;
-  background: #0091d9;
+  background: $fnb-extra;
   border-radius: 50%;
   overflow: hidden;
 
@@ -180,6 +183,10 @@
 }
 
 .page-header__button {
+  min-width: inherit;
+  flex: 0 0 25.8%;
+  max-width: 190px;
+  margin-left: 15px;
   padding-right: 20px;
   padding-left: 20px;
   background: $brand-primary;
@@ -189,7 +196,68 @@
     background-color: darken($brand-primary, 4%);
   }
 
-  @include media(ms, max) {
+  @include media(md, max) {
     display: none;
   }
 }
+
+.switch-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+  margin: 8px 60px 8px auto;
+  line-height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 60px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $fnb-extra;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $fnb-extra;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
