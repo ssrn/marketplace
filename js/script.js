@@ -71,10 +71,14 @@ const switchLogin = () => {
 };
 
 showSearch = () => {
-  const searchIcon = document.querySelector(".search-form__icon");
+  const searchInput = document.querySelector(".search-form__input");
 
-  searchIcon.addEventListener( 'click', function() {
-    document.querySelector(".search-form__input").style.visibility = "visible";
+  window.addEventListener('click', function(e) {
+    if (e.target.classList.contains("icon-search")) {
+      searchInput.style.visibility = "visible";
+    } else{
+      searchInput.style.visibility = "hidden";
+    }
   });
 };
 

@@ -39,6 +39,10 @@
 .page-header__logo {
   margin-right: 30px;
 
+  @include media(xs) {
+    margin-right: 15px;
+  }
+
   @media screen and (min-width: 1560px) {
     position: absolute;
     left: -125px;

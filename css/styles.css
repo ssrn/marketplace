@@ -523,6 +523,9 @@ body.is-fixed {
 
 .page-header__logo {
   margin-right: 30px; }
+  @media only screen and (max-width: 479px) {
+    .page-header__logo {
+      margin-right: 15px; } }
   @media screen and (min-width: 1560px) {
     .page-header__logo {
       position: absolute;
@@ -838,10 +841,8 @@ body.logged-in .unlogged-only {
   background-size: 20px; }
 
 .search-form {
-  position: relative; }
-  @media only screen and (max-width: 479px) {
-    .search-form {
-      flex-grow: 1; } }
+  position: relative;
+  flex-grow: 1; }
 
 .search-form__input {
   padding-top: 10px;

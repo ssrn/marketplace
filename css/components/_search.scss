@@ -1,9 +1,6 @@
 .search-form {
   position: relative;
-
-  @include media(xs) {
-    flex-grow: 1;
-  }
+  flex-grow: 1;
 }
 
 .search-form__input {
