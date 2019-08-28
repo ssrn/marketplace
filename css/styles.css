@@ -394,18 +394,52 @@ table {
   border-spacing: 0;
   border: 1px solid #bebfb9; }
 
-tr.even {
+tr:hover {
   background: #f3f4ee; }
 
 th {
   padding: .75em 8px;
   text-align: left;
-  background: #e1e2dc;
-  border: 1px solid #ccc; }
+  background: #f8f4ef;
+  border-bottom: 1px solid #ccc; }
 
 td {
-  padding: 0.75em 8px; }
+  padding: 8px;
+  border-bottom: 1px solid #ccc; }
 
+@media only screen and (max-width: 767px) {
+  table {
+    border: none; }
+
+  thead {
+    display: none; }
+
+  tr {
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; }
+    tr:hover {
+      background: transparent; }
+    tr:last-child {
+      margin-bottom: 0; }
+
+  td {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 16px;
+    border: none; }
+    td:first-child {
+      padding-top: 16px; }
+    td:last-child {
+      padding-bottom: 16px; }
+
+  [data-th]:before {
+    display: block;
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    padding-right: 20px; } }
 body {
   color: #484848;
   font-family: 'Arial', sans-serif;
@@ -1223,16 +1257,22 @@ body.logged-in .unlogged-only {
   text-align: center; }
 
 @media only screen and (min-width: 768px) {
-  .profile .page-content {
+  .profile:not(.page-orders) .page-content {
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 170px auto;
     grid-gap: 30px; } }
-@media only screen and (min-width: 1200px) {
-  .profile .page-content {
-    grid-template-columns: 240px auto; } }
+
+@media only screen and (min-width: 992px) {
+  .page-orders .page-content {
+    display: grid;
+    grid-template-columns: 170px auto;
+    grid-gap: 30px; } }
 
 @media only screen and (max-width: 767px) {
   .cabinet-sidebar {
+    display: none; } }
+@media only screen and (max-width: 991px) {
+  .page-orders .cabinet-sidebar {
     display: none; } }
 
 .cabinet-menu__item.is-active {
@@ -1245,6 +1285,8 @@ body.logged-in .unlogged-only {
   font-size: 18px; }
   .is-active .cabinet-menu__link, .cabinet-menu__link:hover {
     color: #484848; }
+  .cabinet-menu__item:first-child .cabinet-menu__link {
+    padding-top: 3px; }
 
 .profile-settings {
   margin-top: 6px; }
@@ -1279,6 +1321,9 @@ body.logged-in .unlogged-only {
   padding: 16px 0;
   border-top: solid 1px #e7e8ec;
   cursor: pointer; }
+  .channel:first-child {
+    padding-top: 0;
+    border-top: none; }
   @media only screen and (max-width: 767px) {
     .channel {
       grid-template-columns: 60px minmax(0, auto);

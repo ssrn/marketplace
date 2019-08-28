@@ -6,6 +6,11 @@
   border-top: solid 1px #e7e8ec;
   cursor: pointer;
 
+  &:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
   @include media(ms, max) {
     grid-template-columns: 60px minmax(0, auto);
     grid-gap: 16px;

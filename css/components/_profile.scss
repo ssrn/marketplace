@@ -1,18 +1,28 @@
-.profile .page-content {
+.profile:not(.page-orders) .page-content {
   @include media(sm) {
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 170px auto;
     grid-gap: 30px;
   }
+}
 
-  @include media(lg) {
-    grid-template-columns: 240px auto;
+.page-orders .page-content {
+  @include media(md) {
+    display: grid;
+    grid-template-columns: 170px auto;
+    grid-gap: 30px;
   }
 }
 
 .cabinet-sidebar {
   @include media(ms, max) {
     display: none;
+  }
+
+  .page-orders & {
+    @include media(sm, max) {
+      display: none;
+    }
   }
 }
 
@@ -23,15 +33,19 @@
 }
 
 .cabinet-menu__link {
-    display: block;
-    padding: 6px 0;
-    color: #767676;
-    font-size: 18px;
+  display: block;
+  padding: 6px 0;
+  color: #767676;
+  font-size: 18px;
 
-    .is-active &,
-    &:hover {
-      color: $text-primary;
-    }
+  .is-active &,
+  &:hover {
+    color: $text-primary;
+  }
+
+  .cabinet-menu__item:first-child & {
+    padding-top: 3px;
+  }
 }
 
 .profile-settings {
