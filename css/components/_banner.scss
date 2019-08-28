@@ -13,13 +13,23 @@
   max-width: 800px;
   background: #fff;
   margin: 16px;
-  padding: 36px 3.8% 0;
+  padding: 16px 3.8% 0;
   text-align: center;
+  box-shadow: $box-shadow;
+
+  @include media(lg) {
+    padding-top: 24px;
+  }
 }
 
 .banner__title {
   margin-bottom: 0;
+  font-size: 36px;
   letter-spacing: .018em;
+
+  @include media(ms, max) {
+    font-size: 28px;
+  }
 }
 
 .banner__desc {

@@ -1,6 +1,6 @@
 .mobile-menu {
   position: fixed;
-  top: 77px;
+  top: 76px;
   //bottom: 0;
   display: none;
   width: 100%;
@@ -23,8 +23,8 @@
     }
   }
 
-  body.with-switch {
-    top: 127px;
+  body.with-switch & {
+    top: 126px;
   }
 }
 
