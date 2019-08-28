@@ -10,6 +10,12 @@
   }
 }
 
+.cabinet-sidebar {
+  @include media(ms, max) {
+    display: none;
+  }
+}
+
 .cabinet-menu__item {
   &.is-active {
     font-weight: bold;
@@ -35,12 +41,8 @@
 .profile-settings__form {
   width: 100%;
 
-  @include media(sm) {
+  @include media(ms) {
     max-width: 360px;
-  }
-
-  input {
-    width: 100%;
   }
 }
 
@@ -51,7 +53,7 @@
 .user-picture {
   height: 128px;
   width: 128px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   border: 1px solid #ececec;
   box-shadow: $box-shadow;
 }

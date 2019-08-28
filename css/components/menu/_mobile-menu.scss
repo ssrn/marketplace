@@ -1,6 +1,6 @@
 .mobile-menu {
   position: fixed;
-  top: 127px;
+  top: 77px;
   //bottom: 0;
   display: none;
   width: 100%;
@@ -21,6 +21,10 @@
     @media screen and (min-width: 940px) {
       display: none;
     }
+  }
+
+  body.with-switch {
+    top: 127px;
   }
 }
 

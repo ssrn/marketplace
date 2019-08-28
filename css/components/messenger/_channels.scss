@@ -4,6 +4,7 @@
   grid-gap: 20px;
   padding: 16px 0;
   border-top: solid 1px #e7e8ec;
+  cursor: pointer;
 
   @include media(ms, max) {
     grid-template-columns: 60px minmax(0, auto);

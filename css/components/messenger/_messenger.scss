@@ -6,21 +6,18 @@
 }
 
 .messages-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   border: 1px solid #e1e1e1;
   overflow: hidden;
-
-  @include media(sm) {
-    min-height: 519px;
-    height: calc(100vh - 253px);
-  }
 }
 
 .messenger__messages-scroll {
+  height: 100%;
   padding: 15px;
+  overflow: scroll;
 
   @include media(sm) {
     padding: 15px 30px;
@@ -30,11 +27,9 @@
 .messages-header {
   display: flex;
   flex-wrap: wrap;
-  min-height: 65px;
   padding: 10px;
   background-color: #f7f7fa;
   border-bottom: 1px solid #f1f1f1;
-  overflow: hidden;
 }
 
 .messages-header__photo {
@@ -182,7 +177,8 @@
 
 .reply-input {
   width: 100%;
-  height: 38px;
+  height: 44px;
+  resize: none;
 }
 
 .reply-submit {

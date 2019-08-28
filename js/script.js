@@ -85,9 +85,42 @@ showSearch = () => {
   });
 };
 
-showSearch();
-mobileMenuHandler();
-catalogViewHandler();
-catalogFiltersHandler();
-dialogHandler();
-switchLogin();
+openMessage = () => {
+  const channels = document.querySelectorAll(".channel");
+
+  channels.forEach(function (channel) {
+    channel.addEventListener('click', function() {
+      window.open('./messenger.html', '_self');
+    });
+  })
+};
+
+handleMessengerHeight = () => {
+  if (document.body.classList.contains("messenger")) {
+    setMessengerHeight();
+
+    window.addEventListener('resize', function() {
+      setMessengerHeight();
+    });
+
+    function setMessengerHeight() {
+      const messenger = document.querySelector(".messages-container");
+      messenger.setAttribute("style",`height: calc(100vh - ${messenger.offsetTop}px - 8px)`);
+    }
+  }
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  showSearch();
+  mobileMenuHandler();
+  catalogViewHandler();
+  catalogFiltersHandler();
+  dialogHandler();
+  switchLogin();
+  openMessage();
+});
+
+window.addEventListener("load", function () {
+  handleMessengerHeight();
+});
+

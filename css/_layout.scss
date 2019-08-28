@@ -24,10 +24,14 @@ body.is-fixed {
     margin-bottom: 32px;
   }
 
-  @include media(sm) {
+  @include media(lg) {
     margin-top: 52px;
     margin-bottom: 100px;
   }
+}
+
+.messenger .page-content {
+  margin-bottom: 0;
 }
 
 .navigation {
@@ -35,12 +39,6 @@ body.is-fixed {
 
   @include media(sm) {
     margin-bottom: 20px;
-  }
-
-  .messenger & {
-    @include media(ms, max) {
-      padding: 0 15px;
-    }
   }
 }
 
