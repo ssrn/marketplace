@@ -351,15 +351,21 @@ form {
 textarea,
 input {
   width: 100%;
-  padding: 14px 16px;
+  padding: 12px 16px;
   border: 1px solid #ccc;
   border-radius: 3px; }
 
 .form-item {
-  margin-bottom: 16px; }
+  margin-bottom: 24px; }
 
 label {
-  display: block; }
+  display: block;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 500; }
+
+#edit-picture-upload {
+  border: none;
+  padding: 0; }
 
 .form-checkbox__input {
   width: 16px;
@@ -401,7 +407,7 @@ td {
   padding: 0.75em 8px; }
 
 body {
-  color: #222;
+  color: #484848;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   line-height: 1.5; }
@@ -565,7 +571,7 @@ body.is-fixed {
   display: inline-block;
   margin: 0 10px;
   padding: 0 5px;
-  color: #222; }
+  color: #484848; }
   body.logged-in .header-services__item:first-child {
     margin: 0 0 0 4px; }
 
@@ -603,29 +609,6 @@ body.is-fixed {
 .header-services__login .icon-user {
   width: 19px;
   height: 19px; }
-
-.header-services__profile {
-  position: relative; }
-
-.header-services__profile-menu {
-  position: absolute;
-  top: 100%;
-  max-height: 0;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  visibility: hidden;
-  z-index: 100; }
-  .header-services__profile:hover .header-services__profile-menu {
-    max-height: none;
-    visibility: visible;
-    padding: 8px 20px; }
-
-.profile-menu__item {
-  white-space: nowrap; }
-  .profile-menu__item a {
-    display: inline-block;
-    padding: 4px 0; }
 
 .header-services__avatar {
   display: flex;
@@ -707,6 +690,62 @@ input:focus + .slider {
 input:checked + .slider:before {
   transform: translateX(26px); }
 
+.mobile-menu {
+  position: fixed;
+  top: 127px;
+  display: none;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  box-shadow: 0 4px 8px 0 #ccc;
+  z-index: 1; }
+  .mobile-menu.is-active {
+    display: block; }
+    @media screen and (min-width: 940px) {
+      .mobile-menu.is-active {
+        display: none; } }
+
+.mobile-main-nav {
+  padding-top: 14px;
+  padding-bottom: 16px; }
+
+.mobile-main-nav__link {
+  display: block;
+  padding: 8px 15px;
+  color: #484848;
+  font-size: 18px; }
+
+.mobile-menu__services {
+  padding: 12px 0;
+  background-color: #879934; }
+  .mobile-menu__services a {
+    color: #fff; }
+
+.mobile-menu__services-item {
+  display: block;
+  padding: 12px 15px 12px 50px; }
+
+.mobile-menu__login {
+  color: #fff;
+  background: url("../../../img/svg/user-mobile.svg") no-repeat 15px center;
+  background-size: 20px; }
+
+.mobile-menu__wishlist {
+  background: url("../../../img/svg/bg-heart.svg") no-repeat 15px center;
+  background-size: 20px; }
+
+.mobile-menu__messages {
+  background: url("../../../img/svg/bg-message.svg") no-repeat 15px center;
+  background-size: 20px; }
+
+.mobile-menu__button {
+  display: block;
+  padding: 24px 15px 24px 50px;
+  color: #879934;
+  background: url("../../../img/svg/plus-in-circle.svg") no-repeat 15px center;
+  background-size: 20px; }
+
 @media screen and (max-width: 940px) {
   .main-nav {
     display: none; } }
@@ -729,7 +768,7 @@ input:checked + .slider:before {
 
 .main-nav__link {
   display: block;
-  color: #222;
+  color: #484848;
   font-size: 21px;
   text-decoration: none; }
   .main-nav__link:hover {
@@ -788,62 +827,6 @@ input:checked + .slider:before {
 
 body.logged-in .unlogged-only {
   display: none; }
-
-.mobile-menu {
-  position: fixed;
-  top: 127px;
-  display: none;
-  width: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  background: #fff;
-  box-shadow: 0 4px 8px 0 #ccc;
-  z-index: 1; }
-  .mobile-menu.is-active {
-    display: block; }
-    @media screen and (min-width: 940px) {
-      .mobile-menu.is-active {
-        display: none; } }
-
-.mobile-main-nav {
-  padding-top: 14px;
-  padding-bottom: 16px; }
-
-.mobile-main-nav__link {
-  display: block;
-  padding: 8px 15px;
-  color: #222;
-  font-size: 18px; }
-
-.mobile-menu__services {
-  padding: 12px 0;
-  background-color: #879934; }
-  .mobile-menu__services a {
-    color: #fff; }
-
-.mobile-menu__services-item {
-  display: block;
-  padding: 12px 15px 12px 50px; }
-
-.mobile-menu__login {
-  color: #fff;
-  background: url("../../../img/svg/user-mobile.svg") no-repeat 15px center;
-  background-size: 20px; }
-
-.mobile-menu__wishlist {
-  background: url("../../../img/svg/bg-heart.svg") no-repeat 15px center;
-  background-size: 20px; }
-
-.mobile-menu__messages {
-  background: url("../../../img/svg/bg-message.svg") no-repeat 15px center;
-  background-size: 20px; }
-
-.mobile-menu__button {
-  display: block;
-  padding: 24px 15px 24px 50px;
-  color: #879934;
-  background: url("../../../img/svg/plus-in-circle.svg") no-repeat 15px center;
-  background-size: 20px; }
 
 .search-form {
   position: relative;
@@ -948,7 +931,7 @@ body.logged-in .unlogged-only {
   margin: 8px; }
   .catalog-category a {
     display: block;
-    color: #222;
+    color: #484848;
     border-color: #879934;
     transition: none; }
     .catalog-category a:hover, .catalog-category a.is-active {
@@ -1036,14 +1019,14 @@ body.logged-in .unlogged-only {
 
 .product__name {
   margin: 0;
-  color: #222;
+  color: #484848;
   letter-spacing: .018em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
 .product__price {
-  color: #222;
+  color: #484848;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 20px;
   font-weight: 500; }
@@ -1246,8 +1229,19 @@ body.logged-in .unlogged-only {
   .profile .page-content {
     grid-template-columns: 240px auto; } }
 
+.cabinet-menu__item.is-active {
+  font-weight: bold; }
+
+.cabinet-menu__link {
+  display: block;
+  padding: 6px 0;
+  color: #767676;
+  font-size: 18px; }
+  .is-active .cabinet-menu__link, .cabinet-menu__link:hover {
+    color: #484848; }
+
 .profile-settings {
-  margin-top: 24px; }
+  margin-top: 6px; }
 
 .profile-settings__form {
   width: 100%; }
@@ -1264,7 +1258,8 @@ body.logged-in .unlogged-only {
   height: 128px;
   width: 128px;
   margin-bottom: 8px;
-  border: 1px solid #ececec; }
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .profile-settings__title {
   margin: 0;

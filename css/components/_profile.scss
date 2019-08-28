@@ -10,8 +10,26 @@
   }
 }
 
+.cabinet-menu__item {
+  &.is-active {
+    font-weight: bold;
+  }
+}
+
+.cabinet-menu__link {
+    display: block;
+    padding: 6px 0;
+    color: #767676;
+    font-size: 18px;
+
+    .is-active &,
+    &:hover {
+      color: $text-primary;
+    }
+}
+
 .profile-settings {
-  margin-top: 24px;
+  margin-top: 6px;
 }
 
 .profile-settings__form {
@@ -35,6 +53,7 @@
   width: 128px;
   margin-bottom: 8px;
   border: 1px solid #ececec;
+  box-shadow: $box-shadow;
 }
 
 .profile-settings__title {

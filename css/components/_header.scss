@@ -139,36 +139,6 @@
   }
 }
 
-.header-services__profile {
-  position: relative;
-}
-
-.header-services__profile-menu {
-  position: absolute;
-  top: 100%;
-  max-height: 0;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: $box-shadow;
-  visibility: hidden;
-  z-index: 100;
-
-  .header-services__profile:hover & {
-    max-height: none;
-    visibility: visible;
-    padding: 8px 20px;
-  }
-}
-
-.profile-menu__item {
-  white-space: nowrap;
-
-  a {
-    display: inline-block;
-    padding: 4px 0;
-  }
-}
-
 .header-services__avatar {
   display: flex;
   justify-content: center;

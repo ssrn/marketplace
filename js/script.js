@@ -42,32 +42,35 @@ const catalogFiltersHandler = () => {
 
 const dialogHandler = () => {
   const dialog = document.querySelector(".dialog");
-  const loginBtn = document.querySelector(".header-services__login");
-  const closePopup = document.querySelector(".dialog__close");
+  if (dialog !== null) {
+    const loginBtn = document.querySelector(".header-services__login");
+    const closePopup = document.querySelector(".dialog__close");
 
-  loginBtn.addEventListener("click", function () {
-    dialog.classList.add("dialog--is-opened");
-  });
+    loginBtn.addEventListener("click", function () {
+      dialog.classList.add("dialog--is-opened");
+    });
 
-  closePopup.addEventListener("click", function () {
-    dialog.classList.remove("dialog--is-opened");
-  });
-
-  window.addEventListener("click", function (e) {
-    if (e.target === dialog) {
+    closePopup.addEventListener("click", function () {
       dialog.classList.remove("dialog--is-opened");
-    }
-  });
+    });
+
+    window.addEventListener("click", function (e) {
+      if (e.target === dialog) {
+        dialog.classList.remove("dialog--is-opened");
+      }
+    });
+  }
 };
 
 const switchLogin = () => {
   const checkbox = document.querySelector(".switch input");
+  if (checkbox !== null) {
+    checkbox.checked = false;
 
-  checkbox.checked = false;
-
-  checkbox.addEventListener( 'change', function() {
-    document.body.classList.toggle('logged-in')
-  });
+    checkbox.addEventListener( 'change', function() {
+      document.body.classList.toggle('logged-in')
+    });
+  }
 };
 
 showSearch = () => {
@@ -82,9 +85,9 @@ showSearch = () => {
   });
 };
 
+showSearch();
 mobileMenuHandler();
 catalogViewHandler();
 catalogFiltersHandler();
 dialogHandler();
 switchLogin();
-showSearch();
