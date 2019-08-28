@@ -319,6 +319,7 @@ form {
   text-align: center;
   background: none;
   border: 1px solid #ccc;
+  border-radius: 3px;
   cursor: pointer; }
   .button:hover {
     background-color: #f5f5f5; }
@@ -351,7 +352,8 @@ textarea,
 input {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  border-radius: 3px; }
 
 .form-item {
   margin-bottom: 16px; }
@@ -415,7 +417,6 @@ h6 {
   letter-spacing: .018em; }
 
 h1 {
-  margin-top: 0;
   font-size: 24px;
   line-height: 1.15; }
   @media only screen and (min-width: 768px) {
@@ -449,6 +450,10 @@ body.is-fixed {
 .page-content {
   margin-top: 16px;
   margin-bottom: 16px; }
+  @media only screen and (min-width: 480px) {
+    .page-content {
+      margin-top: 32px;
+      margin-bottom: 32px; } }
   @media only screen and (min-width: 768px) {
     .page-content {
       margin-top: 52px;
@@ -912,23 +917,43 @@ body.logged-in .unlogged-only {
 .catalog-content {
   grid-area: c; }
 
-.catalog-sidebar__filter-buttons-wrap {
+@media only screen and (max-width: 991px) {
+  .catalog-nav {
+    display: none; } }
+
+.catalog-categories__filter-buttons-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 24px; }
-  @media only screen and (min-width: 992px) {
-    .catalog-sidebar__filter-buttons-wrap {
+  @media only screen and (min-width: 768px) {
+    .catalog-categories__filter-buttons-wrap {
       display: none; } }
 
-.catalog-sidebar__filter-button {
+.catalog-categories__filter-button {
   display: none; }
-  .catalog-sidebar__filter-button.is-active {
+  .catalog-categories__filter-button:hover {
+    background-color: #fff; }
+  .catalog-categories__filter-button.is-active {
     display: block; }
 
-@media only screen and (max-width: 991px) {
-  .catalog-nav {
-    display: none; } }
+.catalog-categories__list {
+  margin: 24px -8px; }
+  @media only screen and (max-width: 767px) {
+    .catalog-categories__list {
+      display: none; } }
+
+.catalog-category {
+  display: inline-block;
+  margin: 8px; }
+  .catalog-category a {
+    display: block;
+    color: #222;
+    border-color: #879934;
+    transition: none; }
+    .catalog-category a:hover, .catalog-category a.is-active {
+      color: #fff;
+      background: #879934; }
 
 .catalog-top {
   display: flex;

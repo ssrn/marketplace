@@ -24,17 +24,17 @@ const catalogViewHandler = () => {
 };
 
 const catalogFiltersHandler = () => {
-  const filterButtons = document.querySelectorAll(".catalog-sidebar__filter-button");
+  const filterButtons = document.querySelectorAll(".catalog-categories__filter-button");
   filterButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      let inactiveFilterButton = document.querySelector(".catalog-sidebar__filter-button:not(.is-active)");
+      let inactiveFilterButton = document.querySelector(".catalog-categories__filter-button:not(.is-active)");
       inactiveFilterButton.classList.add("is-active");
       this.classList.remove("is-active");
 
-      if (document.querySelector(".catalog-sidebar__filter-button--hide.is-active")) {
-        document.querySelector(".catalog-nav").style.display = "block";
+      if (document.querySelector(".catalog-categories__filter-button--hide.is-active")) {
+        document.querySelector(".catalog-categories__list").style.display = "block";
       } else {
-        document.querySelector(".catalog-nav").style.display = "none";
+        document.querySelector(".catalog-categories__list").style.display = "none";
       }
     })
   });
