@@ -80,6 +80,8 @@
 
   &:hover,
   .product--in-wishlist & {
+    background-color: rgba(255,255,255,.9);
+
     svg {
       color: #2d2d2d;
       opacity: .9;
@@ -98,53 +100,128 @@
 
 .full-product {
   display: grid;
-  grid-gap: 30px;
+  grid-row-gap: 16px;
 
-  @include media(sm) {
-    grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+          "a"
+          "b"
+          "c";
+
+  @media screen and (min-width: 640px) {
+    grid-column-gap: 30px;
+    grid-template-areas:
+            "a a a a a"
+            "b b b b c";
   }
 }
 
-.full-product__left {
-  position: relative;
-  max-width: 380px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.full-product__img {
-  width: 380px;
+.full-product__top  {
+  grid-area: a;
 }
 
 .full-product__title {
-  margin-top: 0;
-}
-
-.full-product__desc {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .full-product__price {
-  margin-bottom: 16px;
-  font-size: 32px;
+  font-size: 20px;
+
+  @include media(sm) {
+    font-size: 30px;
+  }
 
   &:after {
     content: ' \20BD';
   }
 }
 
-.full-product__actions {
-  @include media(sm) {
-    width: 320px;
-  }
+.full-product__main {
+  grid-area: b;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 24px;
+  align-items: start;
 
-  .button {
-    width: 100%;
+  @include media(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.full-product__right {
+  grid-area: c;
+}
+
+.full-product__left {
+  position: relative;
+  min-width: 0
+}
+
+.full-product__img {
+  display: block;
+}
+
+.full-product__desc {
+  margin-bottom: 16px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.full-product__actions {
+  margin-bottom: 8px;
+}
+
+.full-product__button {
+  width: 100%;
+  margin-bottom: 16px;
+  min-height: 50px;
+}
+
+.button--show-phone {
+  font-size: 18px;
+
+  span {
+    display: block;
+    margin-top: 2px;
+    font-size: 15px;
   }
 }
 
 .full-product__buy {
+  background: $fnb-extra;
+
+  &:hover {
+    background-color: darken($fnb-extra, 4%);
+  }
+}
+
+.full-product__seller-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
   margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.seller-info__photo {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.seller-products {
+  width: 100%;
+  font-size: 14px;
+  color: $text-primary;
+  background-color: #f5f5f5;
+
+  &:hover {
+    color: $text-primary;
+  }
 }
 
 .my-product {

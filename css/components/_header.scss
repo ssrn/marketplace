@@ -163,11 +163,9 @@
   margin-left: 15px;
   padding-right: 20px;
   padding-left: 20px;
-  background: $brand-primary;
 
   &:hover {
     color: #fff;
-    background-color: darken($brand-primary, 4%);
   }
 
   @include media(md, max) {

@@ -326,10 +326,10 @@ form {
 
 .button--primary {
   color: #fff;
-  background-color: #f47621;
+  background-color: #879934;
   border: none; }
   .button--primary:hover {
-    background-color: #f36a0e; }
+    background-color: #7a8a2f; }
 
 .button--l {
   width: 190px;
@@ -444,7 +444,7 @@ body {
   color: #484848;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.55; }
 
 h1,
 h2,
@@ -664,11 +664,9 @@ body.is-fixed {
   max-width: 190px;
   margin-left: 15px;
   padding-right: 20px;
-  padding-left: 20px;
-  background: #879934; }
+  padding-left: 20px; }
   .page-header__button:hover {
-    color: #fff;
-    background-color: #7a8a2f; }
+    color: #fff; }
   @media only screen and (max-width: 1199px) {
     .page-header__button {
       display: none; } }
@@ -733,7 +731,7 @@ input:checked + .slider:before {
   -webkit-overflow-scrolling: touch;
   background: #fff;
   box-shadow: 0 4px 8px 0 #ccc;
-  z-index: 1; }
+  z-index: 100; }
   .mobile-menu.is-active {
     display: block; }
     @media screen and (min-width: 940px) {
@@ -1096,9 +1094,11 @@ body.logged-in .unlogged-only {
     height: 100%;
     color: rgba(255, 255, 255, 0.9);
     transition: color ease .2s; }
-  .button-wishlist:hover svg, .product--in-wishlist .button-wishlist svg {
-    color: #2d2d2d;
-    opacity: .9; }
+  .button-wishlist:hover, .product--in-wishlist .button-wishlist {
+    background-color: rgba(255, 255, 255, 0.9); }
+    .button-wishlist:hover svg, .product--in-wishlist .button-wishlist svg {
+      color: #2d2d2d;
+      opacity: .9; }
   .full-product .button-wishlist {
     width: 36px;
     height: 36px; }
@@ -1108,40 +1108,94 @@ body.logged-in .unlogged-only {
 
 .full-product {
   display: grid;
-  grid-gap: 30px; }
-  @media only screen and (min-width: 768px) {
+  grid-row-gap: 16px;
+  grid-template-areas: "a" "b" "c"; }
+  @media screen and (min-width: 640px) {
     .full-product {
-      grid-template-columns: 1fr 2fr; } }
+      grid-column-gap: 30px;
+      grid-template-areas: "a a a a a" "b b b b c"; } }
 
-.full-product__left {
-  position: relative;
-  max-width: 380px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.full-product__img {
-  width: 380px; }
+.full-product__top {
+  grid-area: a; }
 
 .full-product__title {
-  margin-top: 0; }
-
-.full-product__desc {
-  margin-bottom: 16px; }
+  margin-bottom: 8px; }
 
 .full-product__price {
-  margin-bottom: 16px;
-  font-size: 32px; }
+  font-size: 20px; }
+  @media only screen and (min-width: 768px) {
+    .full-product__price {
+      font-size: 30px; } }
   .full-product__price:after {
     content: ' \20BD'; }
 
-@media only screen and (min-width: 768px) {
-  .full-product__actions {
-    width: 320px; } }
-.full-product__actions .button {
-  width: 100%; }
+.full-product__main {
+  grid-area: b;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 24px;
+  align-items: start; }
+  @media only screen and (min-width: 992px) {
+    .full-product__main {
+      grid-template-columns: 1fr 1fr; } }
+
+.full-product__right {
+  grid-area: c; }
+
+.full-product__left {
+  position: relative;
+  min-width: 0; }
+
+.full-product__img {
+  display: block; }
+
+.full-product__desc {
+  margin-bottom: 16px; }
+  .full-product__desc p {
+    margin: 0; }
+
+.full-product__actions {
+  margin-bottom: 8px; }
+
+.full-product__button {
+  width: 100%;
+  margin-bottom: 16px;
+  min-height: 50px; }
+
+.button--show-phone {
+  font-size: 18px; }
+  .button--show-phone span {
+    display: block;
+    margin-top: 2px;
+    font-size: 15px; }
 
 .full-product__buy {
-  margin-bottom: 16px; }
+  background: #ba529f; }
+  .full-product__buy:hover {
+    background-color: #b14795; }
+
+.full-product__seller-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  line-height: 1.4; }
+
+.seller-info__photo {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden; }
+
+.seller-products {
+  width: 100%;
+  font-size: 14px;
+  color: #484848;
+  background-color: #f5f5f5; }
+  .seller-products:hover {
+    color: #484848; }
 
 .my-product {
   display: flex;

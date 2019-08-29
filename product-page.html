@@ -6,97 +6,200 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap&subset=cyrillic" rel="stylesheet">
+  <script src="./lightslider/js/jquery-3.4.1.min.js"></script>
+  <script src="./lightslider/js/lightslider.js"></script>
+  <link rel="stylesheet" type="text/css" href="./lightslider/css/lightslider.css">
 </head>
-<body>
+<body class="with-switch">
+
+<div class="switch-container container">
+  <label class="switch">
+    Login
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+</div>
+
 <header class="page-header">
-  <div class="page-header__inner container">
-    <a class="page-header__logo" href="/">
-      <img class="page-header__logo-img" src="./img/FNB_logo.png" alt="">
-    </a>
+  <div class="container">
 
-    <form class="page-header__search search-form" role='search' action="/" method="get">
-      <label class="visually-hidden" for="header-search">Поиск</label>
-      <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
-      <div class="search-form__icon">
-        <svg class="icon-search">
-          <use xlink:href="../img/svg/search.svg#search"></use>
-        </svg>
-      </div>
-      <button class="visually-hidden" type="submit">Искать</button>
-    </form>
+    <div class="page-header__inner">
+      <a class="page-header__logo" href="/">
+        <img class="page-header__logo-img" src="./img/FNB_logo.png" alt="">
+      </a>
 
-    <div class="header-services">
-      <div class="header-services__inner">
-        <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
+      <nav class="main-nav">
+        <div class="main-nav__inner-wrap container">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-header__right">
+        <form class="page-header__search search-form" role='search' action="/" method="get">
+          <label class="visually-hidden" for="header-search">Поиск</label>
+          <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
+          <div class="search-form__icon">
+            <svg class="icon-search">
+              <use xlink:href="../img/svg/search.svg#search"></use>
+            </svg>
+          </div>
+          <button class="visually-hidden" type="submit">Искать</button>
+        </form>
+
+        <div class="header-services">
+          <div class="header-services__inner">
+            <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
           <span class="header-services__icon">
             <svg class="icon-heart">
               <use xlink:href="../img/svg/heart.svg#heart"></use>
             </svg>
           </span>
-        </a>
-        <a href="/profile/messenger" class="header-services__item header-services__messages" aria-label="Сообщения" title="Сообщения">
-          <span class="header-services__icon">
+            </a>
+            <a href="/messenger-channels.html" class="header-services__item header-services__messages logged-in-only" aria-label="Сообщения" title="Сообщения">
+              <span class="header-services__icon">
             <svg class="icon-message">
               <use xlink:href="../img/svg/message.svg#message"></use>
             </svg>
           </span>
-          <div class="notify-number">2</div>
-        </a>
-        <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
-        <a href="#login" class="header-services__item header-services__login">Вход и регистрация</a>
+              <div class="notify-number">2</div>
+            </a>
+            <a href="/orders.html" class="header-services__item header-services__products logged-in-only">Мои объявления</a>
+
+            <a href="#login" class="header-services__item header-services__login unlogged-only">
+              <span class="header-services__icon">
+            <svg class="icon-user">
+              <use xlink:href="../img/svg/user.svg#user"></use>
+            </svg>
+          </span>
+            </a>
+
+            <div class="header-services__item header-services__profile logged-in-only">
+              <a href="/profile.html" class="header-services__avatar">
+                C
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="/add-product.html" class="page-header__button button button--primary">Продать урожай</a>
+
+        <button class="main-nav-trigger" type="button" title="Главное меню">
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+        </button>
       </div>
     </div>
-
-    <a href="/additem" class="page-header__button button button--primary">Продать урожай</a>
-
-    <button class="main-nav-trigger" type="button" title="Главное меню">
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-    </button>
   </div>
 </header>
-<nav class="main-nav">
-  <ul class="main-nav__list container">
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
-  </ul>
-</nav>
+<div class="mobile-menu">
+  <nav class="mobile-main-nav">
+    <ul class="mobile-main-nav__list">
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Овощи</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Фрукты</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Ягоды</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Зелень</a></li>
+    </ul>
+  </nav>
+
+  <div class="mobile-menu__services">
+    <a href="/profile.html" class="mobile-menu__services-item mobile-menu__login">Личный кабинет</a>
+    <a href="/wishlist.html" class="mobile-menu__services-item mobile-menu__wishlist" title="Избранное" aria-label="Избранное">
+      Избранное
+    </a>
+    <a href="/messenger-channels.html" class="mobile-menu__services-item mobile-menu__messages logged-in-only" aria-label="Сообщения" title="Сообщения">
+      Сообщения
+    </a>
+  </div>
+
+  <a href="/add-product.html" class="mobile-menu__button">Продать урожай</a>
+
+</div>
+
 <main class="page-content container">
   <div class="full-product">
-    <div class="full-product__left">
-      <img class="full-product__img" src="./img/products/cucumber.png" alt="">
-      <button class="button button-wishlist  " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
-        <svg>
-          <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
-        </svg>
-      </button>
+    <div class="full-product__top">
+      <h1 class="full-product__title">Клубника сладкая и ароматная</h1>
+      <div class="full-product__price">250</div>
+    </div>
+    <div class="full-product__main">
+      <div class="full-product__left">
+        <ul id="lightSlider">
+          <li data-thumb="./img/products/strawberry.jpg">
+            <img src="./img/products/strawberry.jpg" />
+          </li>
+          <li data-thumb="./img/products/klubnika.jpg">
+            <img src="./img/products/klubnika.jpg" />
+          </li>
+          <li data-thumb="./img/products/recept.jpg">
+            <img src="./img/products/recept.jpg" />
+          </li>
+        </ul>
+
+        <button class="button button-wishlist  " type="button" title="Добавить в избранное" aria-label="Добавить в избранное">
+          <svg>
+            <use xlink:href="../img/svg/wishlist-heart.svg#wishlist-heart"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="full-product__about">
+        <div class="full-product__desc">
+          <p>
+            Выращена в экологически чистом районе — в поселке Плодовое в Приозерском районе.
+            Сладкая и ароматная. Могу поделиться усами.
+
+            Плоды шаровидной формы, весом 1—2 г, с облегающей чашечкой, при полном созреваний — не облегает.
+            Окрас при технической зрелости розово-красный с зеленовато-белыми участками, при полном созреваний —
+            вишнево-красный, имеют особый аромат. В отличие от других земляник плоды трудно отделяются от чашечки,
+            срываются вместе с ней с характерным шелчком. По консистенции плотнее и транспортабельнее,
+            чем у земляники лесной.
+          </p>
+        </div>
+      </div>
     </div>
     <div class="full-product__right">
-      <h1 class="full-product__title">Огурцы &#171;Зазуля&#187;</h1>
-      <div class="full-product__desc">
-        Выращены в экологически чистом районе. Хрустящие, не горчат.
-        Огурцы привычный для нас овощ, без которого невозможно представить многие салаты. Также их широко используют
-        для соления. Огурцы на 95% состоят из воды, поэтому содержат мало калорий и идеально подходят для диетического
-        питания. Благодаря содержанию ферментов они способствуют усвоению животных белков. Огурцы нужны в нашем рационе,
-        так как содержат важные для организма питательные вещества.
-      </div>
-      <div class="full-product__price">70</div>
       <div class="full-product__actions">
-        <div class="full-product__buy">
-          <button class="button button--primary button--l" type="submit">Оплатить</button>
-        </div>
-        <div class="full-product__send-message">
-          <button class="button button--l">Написать сообщение</button>
-        </div>
+        <button class="full-product__buy full-product__button button button--primary" type="submit">Оплатить</button>
+        <button class="full-product__button button button--primary button--show-phone">
+          Показать телефон
+          <span>8 921 XXX-XX-XX</span>
+        </button>
+        <button class="full-product__button button">Написать сообщение</button>
       </div>
+      <div class="full-product__seller-info">
+        <div class="seller-info__right">
+          <a href="" class="seller-info__name">Василий</a>
+          <div>С нами c апреля 2019</div>
+          <div>Завершено 2 объявления</div>
+        </div>
+        <a href="" class="seller-info__photo">
+            <img class="cropped-image" src="./img/user-pictures/user.jpg" alt="">
+          </a>
+      </div>
+      <a href="" class="seller-products button">2 объявления пользователя</a>
     </div>
   </div>
 </main>
 
-<script src="js/script.js"></script>
+<script src="./js/script.js"></script>
+<script type="text/javascript">
+  (function ($) {
+    $(document).ready(function() {
+      $("#lightSlider").lightSlider({
+        gallery: true,
+        item: 1,
+        loop:true,
+        slideMargin: 0,
+        thumbItem: 9
+      });
+    });
+  }(jQuery));
+</script>
 </body>
 </html>

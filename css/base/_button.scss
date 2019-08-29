@@ -14,11 +14,11 @@
 
 .button--primary {
   color: #fff;
-  background-color: $brand-contrast;
+  background-color: $brand-primary;
   border: none;
 
   &:hover {
-    background-color: darken($brand-contrast, 4%);
+    background-color: darken($brand-primary, 4%);
   }
 }
 
