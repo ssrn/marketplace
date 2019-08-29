@@ -371,6 +371,39 @@ label {
   border: none;
   padding: 0; }
 
+.check {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  user-select: none;
+  cursor: pointer; }
+
+.check__input:hover ~ .check__box:after, .check__input:focus ~ .check__box:after, .check__input:checked ~ .check__box:after {
+  display: block; }
+
+.check__box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+  transform: translateY(-50%); }
+  .check__box:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #879934;
+    border-width: 0 2px 2px 0;
+    transform: rotate(40deg); }
+
 .form-checkbox__input {
   width: 16px;
   height: 16px; }
