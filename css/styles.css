@@ -1067,10 +1067,10 @@ body.logged-in .unlogged-only {
   height: 200px;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.08), 0 1px 3px 1px rgba(60, 64, 67, 0.16);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 135ms cubic-bezier(0.4, 0, 0.2, 1), width 235ms cubic-bezier(0.4, 0, 0.2, 1); }
   .product:hover .product__img-wrap {
-    box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1); }
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }
   .products--list .product__img-wrap {
     width: 200px;
     margin-right: 24px; }
@@ -1090,6 +1090,8 @@ body.logged-in .unlogged-only {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
+  .product__link:hover .product__name {
+    color: #f47621; }
 
 .product__price {
   color: #333333;
