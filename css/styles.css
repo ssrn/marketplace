@@ -1225,6 +1225,11 @@ body.logged-in .unlogged-only {
   .seller-products:hover {
     color: #484848; }
 
+.add-product-button {
+  margin-bottom: 16px; }
+  .add-product-button:hover {
+    color: #fff; }
+
 .my-product__actions {
   margin: 0 -8px 10px; }
 

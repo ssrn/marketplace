@@ -239,6 +239,14 @@
   }
 }
 
+.add-product-button {
+  margin-bottom: 16px;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
 .my-product__actions {
   margin: 0 -8px 10px;
 }
