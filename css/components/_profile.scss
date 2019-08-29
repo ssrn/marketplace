@@ -1,3 +1,9 @@
+.profile {
+  .page-title {
+    margin-top: 0;
+  }
+}
+
 .profile:not(.page-orders) .page-content {
   @include media(sm) {
     display: grid;

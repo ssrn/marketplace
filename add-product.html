@@ -7,84 +7,129 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
-<body class="profile">
-
+<body class="profile logged-in">
 
 <header class="page-header">
-  <div class="page-header__inner container">
-    <a class="page-header__logo" href="/">
-      <img class="page-header__logo-img" src="./img/FNB_logo.png" alt="">
-    </a>
+  <div class="container">
 
-    <form class="page-header__search search-form" role='search' action="/" method="get">
-      <label class="visually-hidden" for="header-search">Поиск</label>
-      <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
-      <div class="search-form__icon">
-        <svg class="icon-search  header-services__icon">
-          <use xlink:href="../img/svg/search.svg#search"></use>
-        </svg>
-      </div>
-      <button class="visually-hidden" type="submit">Искать</button>
-    </form>
+    <div class="page-header__inner">
+      <a class="page-header__logo" href="/">
+        <img class="page-header__logo-img" src="./img/FNB_logo.png" alt="">
+      </a>
 
-    <div class="header-services">
-      <div class="header-services__inner">
-        <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
+      <nav class="main-nav">
+        <div class="main-nav__inner-wrap container">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
+            <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-header__right">
+        <form class="page-header__search search-form" role='search' action="/" method="get">
+          <label class="visually-hidden" for="header-search">Поиск</label>
+          <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
+          <div class="search-form__icon">
+            <svg class="icon-search header-services__icon">
+              <use xlink:href="../img/svg/search.svg#search"></use>
+            </svg>
+          </div>
+          <button class="visually-hidden" type="submit">Искать</button>
+        </form>
+
+        <div class="header-services">
+          <div class="header-services__inner">
+            <a href="/wishlist.html" class="header-services__item header-services__wishlist" title="Избранное" aria-label="Избранное">
           <span class="header-services__icon">
             <svg class="icon-heart">
               <use xlink:href="../img/svg/heart.svg#heart"></use>
             </svg>
           </span>
-        </a>
-        <a href="/profile/messenger" class="header-services__item header-services__messages" aria-label="Сообщения" title="Сообщения">
-          <span class="header-services__icon">
+            </a>
+            <a href="/messenger-channels.html" class="header-services__item header-services__messages logged-in-only" aria-label="Сообщения" title="Сообщения">
+              <span class="header-services__icon">
             <svg class="icon-message">
               <use xlink:href="../img/svg/message.svg#message"></use>
             </svg>
           </span>
-        </a>
-        <a href="/profile" class="header-services__item header-services__products">Мои объявления</a>
-        <div class="header-services__item header-services__profile">
-          <a href="#login" class="header-services__avatar">
-            C
-          </a>
-          <div class="header-services__profile-menu profile-menu">
-            <ul class="profile-menu__list">
-              <li class="profile-menu__item"><a href="/profile.html">Профиль</a></li>
-              <li class="profile-menu__item"><a href="">Мои объявления</a></li>
-            </ul>
+              <div class="notify-number">2</div>
+            </a>
+            <a href="/orders.html" class="header-services__item header-services__products logged-in-only">Мои объявления</a>
+
+            <a href="#login" class="header-services__item header-services__login unlogged-only">
+              <span class="header-services__icon">
+            <svg class="icon-user">
+              <use xlink:href="../img/svg/user.svg#user"></use>
+            </svg>
+          </span>
+            </a>
+
+            <div class="header-services__item header-services__profile logged-in-only">
+              <a href="/profile.html" class="header-services__avatar">
+                C
+              </a>
+            </div>
           </div>
         </div>
+
+        <a href="/add-product.html" class="page-header__button button button--primary">Продать урожай</a>
+
+        <button class="main-nav-trigger" type="button" title="Главное меню">
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+          <span class="main-nav-trigger__line"></span>
+        </button>
       </div>
     </div>
-
-    <a href="/additem" class="page-header__button button button--primary">Продать урожай</a>
-
-    <button class="main-nav-trigger" type="button" title="Главное меню">
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-      <span class="main-nav-trigger__line"></span>
-    </button>
   </div>
 </header>
-<nav class="main-nav">
-  <ul class="main-nav__list container">
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Овощи</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Фрукты</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Ягоды</a></li>
-    <li class="main-nav__item"><a href="/catalog.html" class="main-nav__link">Зелень</a></li>
-  </ul>
-</nav>
-<main class="page-content container">
-  <div class="profile-sidebar">
-    <ul>
-      <li><a href="/my-products.html">Мои объявления</a></li>
-      <li><a href="/orders.html">Заказы</a></li>
-      <li><a href="/messenger-channels.html">Сообщения</a></li>
-      <li><a href="/profile.html">Настройки</a></li>
+<div class="mobile-menu">
+  <nav class="mobile-main-nav">
+    <ul class="mobile-main-nav__list">
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Овощи</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Фрукты</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Ягоды</a></li>
+      <li class="mobile-main-nav__item"><a href="/catalog.html" class="mobile-main-nav__link">Зелень</a></li>
     </ul>
+  </nav>
+
+  <div class="mobile-menu__services">
+    <a href="/profile.html" class="mobile-menu__services-item mobile-menu__login">Личный кабинет</a>
+    <a href="/wishlist.html" class="mobile-menu__services-item mobile-menu__wishlist" title="Избранное" aria-label="Избранное">
+      Избранное
+    </a>
+    <a href="/messenger-channels.html" class="mobile-menu__services-item mobile-menu__messages logged-in-only" aria-label="Сообщения" title="Сообщения">
+      Сообщения
+    </a>
   </div>
+
+  <a href="/add-product.html" class="mobile-menu__button">Продать урожай</a>
+
+</div>
+
+<main class="page-content container">
+
+  <aside class="cabinet-sidebar">
+    <ul class="cabinet-menu">
+      <li class="cabinet-menu__item">
+        <a class="cabinet-menu__link" href="/my-products.html">Мои объявления</a>
+      </li>
+      <li class="cabinet-menu__item">
+        <a class="cabinet-menu__link" href="/orders.html">Заказы</a>
+      </li>
+      <li class="cabinet-menu__item">
+        <a class="cabinet-menu__link" href="/messenger-channels.html">Сообщения</a>
+      </li>
+      <li class="cabinet-menu__item">
+        <a class="cabinet-menu__link" href="/profile.html">Настройки</a>
+      </li>
+    </ul>
+  </aside>
+
   <div class="add-product">
     <h1 class="page-title">Новое объявление</h1>
     <form id="add-product-form" class="add-product__form" action="/" method="post">

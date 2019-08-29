@@ -1335,6 +1335,9 @@ body.logged-in .unlogged-only {
   font-size: 18px;
   text-align: center; }
 
+.profile .page-title {
+  margin-top: 0; }
+
 @media only screen and (min-width: 768px) {
   .profile:not(.page-orders) .page-content {
     display: grid;
