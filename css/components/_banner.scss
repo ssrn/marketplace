@@ -16,6 +16,7 @@
   padding: 16px 3.8% 0;
   text-align: center;
   box-shadow: $box-shadow;
+  border-radius: $border-radius;
 
   @include media(lg) {
     padding-top: 24px;

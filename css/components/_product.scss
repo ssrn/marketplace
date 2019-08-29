@@ -11,9 +11,13 @@
 
 .product__img-wrap {
   height: 200px;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: 0 1px 1px 0 rgba(60,64,67,.08),0 1px 3px 1px rgba(60,64,67,.16);
+  transition: box-shadow 135ms cubic-bezier(.4,0,.2,1),width 235ms cubic-bezier(.4,0,.2,1);
 
   .product:hover & {
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 3px 1px rgba(60,64,67,.2),0 2px 8px 4px rgba(60,64,67,.1);
   }
 
   .products--list & {
@@ -43,7 +47,7 @@
 }
 
 .product__price {
-  color: $text-primary;
+  color: $text-black;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
@@ -124,6 +128,7 @@
 }
 
 .full-product__price {
+  color: $text-black;
   font-size: 20px;
 
   @include media(sm) {
@@ -192,7 +197,7 @@
   background: $fnb-extra;
 
   &:hover {
-    background-color: darken($fnb-extra, 4%);
+    background: $fnb-extra;
   }
 }
 

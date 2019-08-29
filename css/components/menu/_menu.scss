@@ -29,6 +29,7 @@
   font-size: 21px;
   text-decoration: none;
 
+  &.is-active,
   &:hover {
     color: $brand-contrast;
   }
