@@ -1261,9 +1261,19 @@ body.logged-in .unlogged-only {
     color: #484848; }
 
 .add-product-button {
-  margin-bottom: 16px; }
+  margin-bottom: 8px; }
   .add-product-button:hover {
     color: #fff; }
+
+.my-products .products {
+  grid-gap: 0; }
+
+.my-product {
+  padding-bottom: 32px;
+  padding-top: 16px;
+  border-bottom: 1px solid #ccc; }
+  .my-product:last-child {
+    border-bottom: none; }
 
 .my-product__actions {
   margin: 0 -8px 10px; }
@@ -1382,13 +1392,13 @@ body.logged-in .unlogged-only {
   .profile:not(.page-orders) .page-content {
     display: grid;
     grid-template-columns: 170px auto;
-    grid-gap: 30px; } }
+    grid-column-gap: 30px; } }
 
 @media only screen and (min-width: 992px) {
   .page-orders .page-content {
     display: grid;
     grid-template-columns: 170px auto;
-    grid-gap: 30px; } }
+    grid-column-gap: 30px; } }
 
 @media only screen and (max-width: 767px) {
   .cabinet-sidebar {

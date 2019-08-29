@@ -8,7 +8,7 @@
   @include media(sm) {
     display: grid;
     grid-template-columns: 170px auto;
-    grid-gap: 30px;
+    grid-column-gap: 30px;
   }
 }
 
@@ -16,7 +16,7 @@
   @include media(md) {
     display: grid;
     grid-template-columns: 170px auto;
-    grid-gap: 30px;
+    grid-column-gap: 30px;
   }
 }
 
