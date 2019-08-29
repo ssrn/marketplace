@@ -17,7 +17,8 @@
 .messenger__messages-scroll {
   height: 100%;
   padding: 15px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
   @include media(sm) {
     padding: 15px 30px;

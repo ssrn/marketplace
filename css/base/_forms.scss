@@ -25,7 +25,9 @@ label {
 .check {
   display: block;
   position: relative;
-  padding-left: 28px;
+  padding-left: 30px;
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
   user-select: none;
   cursor: pointer;
 }
@@ -48,8 +50,8 @@ label {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: $border-radius;
@@ -60,8 +62,8 @@ label {
     content: "";
     position: absolute;
     display: none;
-    left: 6px;
-    top: 2px;
+    left: 7px;
+    top: 3px;
     width: 5px;
     height: 10px;
     border: solid $brand-primary;
