@@ -1175,8 +1175,7 @@ body.logged-in .unlogged-only {
   border: none;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
-  cursor: default;
-  outline: none; }
+  cursor: default; }
   .products--list .button-wishlist {
     left: 160px; }
   .button-wishlist svg {
