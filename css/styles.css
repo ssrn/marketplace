@@ -380,8 +380,10 @@ label {
   user-select: none;
   cursor: pointer; }
 
-.check__input:hover ~ .check__box:after, .check__input:focus ~ .check__box:after, .check__input:checked ~ .check__box:after {
+.check__input:focus ~ .check__box:after, .check__input:checked ~ .check__box:after {
   display: block; }
+.check__input:focus + .check__box {
+  box-shadow: 0 0 1px 0.1em #0091d9; }
 
 .check__box {
   position: absolute;
@@ -416,7 +418,8 @@ label {
 
 .select--custom {
   padding: 8px 16px;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  border-radius: 3px; }
 
 .select-icon {
   position: absolute;
@@ -1035,6 +1038,8 @@ body.logged-in .unlogged-only {
     display: block; }
 
 .catalog-categories__list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 24px -8px; }
   @media only screen and (max-width: 767px) {
     .catalog-categories__list {
@@ -1043,6 +1048,13 @@ body.logged-in .unlogged-only {
 .catalog-category {
   display: inline-block;
   margin: 8px; }
+  @media only screen and (min-width: 768px) {
+    .catalog-category {
+      flex-basis: 9%;
+      min-width: 106px; }
+      .catalog-category a {
+        padding-right: 10px;
+        padding-left: 10px; } }
   .catalog-category a {
     display: block;
     color: #484848;
