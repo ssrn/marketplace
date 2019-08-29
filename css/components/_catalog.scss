@@ -153,14 +153,9 @@
 
 .products {
   display: grid;
+  grid-gap: 30px;
 }
 
 .products--table {
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  grid-gap: 30px;
-}
-
-.products--list {
-  grid-auto-rows: minmax(0, auto);
-  grid-gap: 32px;
 }
