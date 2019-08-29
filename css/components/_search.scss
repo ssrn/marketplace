@@ -1,18 +1,28 @@
 .search-form {
   position: relative;
   flex-grow: 1;
+
+  @media screen and (min-width: 941px) {
+    margin-right: 10px;
+  }
 }
 
 .search-form__input {
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 40px;
   visibility: hidden;
 }
 
 .search-form__icon {
   position: absolute;
-  top: 10px;
-  right: 12px;
+  top: 0;
+  right: 0;
+  padding: 11px 12px 8px;
+
+  @media screen and (min-width: 941px) {
+    left: 0;
+  }
 }
 
 .icon-search {

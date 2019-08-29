@@ -21,6 +21,10 @@
 .main-nav__item {
   display: inline-block;
   margin-right: 30px;
+
+  &:last-child {
+    margin-right: 18px;
+  }
 }
 
 .main-nav__link {

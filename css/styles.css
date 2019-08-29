@@ -809,6 +809,8 @@ input:checked + .slider:before {
 .main-nav__item {
   display: inline-block;
   margin-right: 30px; }
+  .main-nav__item:last-child {
+    margin-right: 18px; }
 
 .main-nav__link {
   display: block;
@@ -875,16 +877,24 @@ body.logged-in .unlogged-only {
 .search-form {
   position: relative;
   flex-grow: 1; }
+  @media screen and (min-width: 941px) {
+    .search-form {
+      margin-right: 10px; } }
 
 .search-form__input {
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 40px;
   visibility: hidden; }
 
 .search-form__icon {
   position: absolute;
-  top: 10px;
-  right: 12px; }
+  top: 0;
+  right: 0;
+  padding: 11px 12px 8px; }
+  @media screen and (min-width: 941px) {
+    .search-form__icon {
+      left: 0; } }
 
 .icon-search {
   width: 20px;
