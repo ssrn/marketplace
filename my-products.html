@@ -29,16 +29,14 @@
       </nav>
 
       <div class="page-header__right">
-        <form class="page-header__search search-form" role='search' action="/" method="get">
-          <label class="visually-hidden" for="header-search">Поиск</label>
-          <input class="search-form__input" id="header-search" type="text" placeholder="Поиск..."/>
-          <div class="search-form__icon">
-            <svg class="icon-search header-services__icon">
-              <use xlink:href="./img/svg/search.svg#search"></use>
-            </svg>
-          </div>
-          <button class="visually-hidden" type="submit">Искать</button>
-        </form>
+
+        <div class="page-header__search">
+          <form class="search-form" action="" autocomplete="on">
+            <label class="visually-hidden" for="header-search">Поиск</label>
+            <input id="header-search" name="search" type="text" placeholder="Поиск...">
+            <input value="" type="submit">
+          </form>
+        </div>
 
         <div class="header-services">
           <div class="header-services__inner">

@@ -73,18 +73,6 @@ const switchLogin = () => {
   }
 };
 
-showSearch = () => {
-  const searchInput = document.querySelector(".search-form__input");
-
-  window.addEventListener('click', function(e) {
-    if (e.target.classList.contains("icon-search")) {
-      searchInput.style.visibility = "visible";
-    } else{
-      searchInput.style.visibility = "hidden";
-    }
-  });
-};
-
 openMessage = () => {
   const channels = document.querySelectorAll(".channel");
 
@@ -111,7 +99,6 @@ handleMessengerHeight = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  showSearch();
   mobileMenuHandler();
   catalogViewHandler();
   catalogFiltersHandler();
